@@ -3,10 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>Confion - Conference session app</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="foundation/css/foundation.css">
   <link rel="stylesheet" href="app.css">
+  <script src="foundation/js/vendor/modernizr.js"></script>
 </head>
 <body>
   <ul class="menu">
@@ -30,5 +33,11 @@
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+
+  <script src="foundation/js/vendor/jquery.js"></script>
+  <script src="foundation/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 </html>
