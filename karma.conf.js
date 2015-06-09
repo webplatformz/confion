@@ -1,9 +1,9 @@
-module.exports = function (config) {
-    var configuration = {
+module.exports = function(config){
+    config.set({
 
-        basePath: './',
+        basePath : './',
 
-        files: [
+        files : [
             'app/bower_components/angular/angular.js',
             'app/bower_components/angular-route/angular-route.js',
             'app/bower_components/angular-mocks/angular-mocks.js',
@@ -11,35 +11,23 @@ module.exports = function (config) {
             'app/view*/**/*.js'
         ],
 
-        autoWatch: true,
+        autoWatch : true,
 
         frameworks: ['jasmine'],
 
-        browsers: ['Chrome'],
+        browsers : ['Chrome'],
 
-        plugins: [
+        plugins : [
             'karma-chrome-launcher',
+            'karma-firefox-launcher',
             'karma-jasmine',
             'karma-junit-reporter'
         ],
 
-        junitReporter: {
+        junitReporter : {
             outputFile: 'test_out/unit.xml',
             suite: 'unit'
-        },
-
-
-        customLaunchers: {
-            Chrome_travis_ci: {
-                base: 'Chrome',
-                flags: ['--no-sandbox']
-            }
         }
 
-    };
-    config.set(configuration);
-
-    if (process.env.TRAVIS) {
-        config.browsers = ['Chrome_travis_ci'];
-    }
+    });
 };
