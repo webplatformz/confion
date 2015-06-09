@@ -5,9 +5,9 @@
   "description": "An app to display conference sessions.",
   "repository": "https://github.com/webplatformz/confion.git",
   "dependencies": {
-    "angular": "1.2.x",
-    "angular-route": "1.2.x",
-    "angular-loader": "1.2.x",
-    "angular-mocks": "~1.2.x"
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0"
   }
 }
