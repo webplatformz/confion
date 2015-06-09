@@ -1,6 +1,9 @@
 # confion
 App to browse conference talks
 
+![Build Status](https://travis-ci.org/webplatformz/confion.svg?branch=master) [
+![Dependencies Status](https://david-dm.org/webplatformz/confion.png)](https://david-dm.org/webplatformz/confion)
+
 
 ## Sample data generator
 http://www.json-generator.com/
