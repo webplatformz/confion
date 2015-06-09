@@ -1,7 +1,7 @@
 # confion
 App to browse conference talks
 
-![Build Status](https://travis-ci.org/webplatformz/confion.svg?branch=master) [
+![Build Status](https://travis-ci.org/webplatformz/confion.svg?branch=master) (travis-ci.org/webplatformz/confion)
 ![Dependencies Status](https://david-dm.org/webplatformz/confion.png)](https://david-dm.org/webplatformz/confion)
 
 ## Installation
