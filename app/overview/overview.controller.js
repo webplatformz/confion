@@ -9,6 +9,10 @@ angular.module('myApp.overview', ['ngRoute'])
   });
 }])
 
-.controller('OverviewCtrl', ['$scope', function($scope) {
+.controller('OverviewCtrl', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
   $scope.test = "blub";
+
+  var ref = new Firebase("https://confion.firebaseio.com/session");
+
+  $scope.data = $firebaseArray(ref);
 }]);
