@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.overview', ['ngRoute'])
+angular.module('app.overview', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
       $routeProvider.when('/overview', {
