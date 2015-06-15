@@ -33,3 +33,8 @@ div .inner-wrap {
     box-shadow: 0 0 0 2px #000000;
     transition: 0.5s ease;
 }
+
+.session-header {
+    margin-top: 5px;
+    font-weight: bold;
+}
