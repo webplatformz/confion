@@ -13,14 +13,14 @@ angular
 
     .controller('SessionController', SessionController);
 
-SessionController.$inject = ['$routeParams'];
-function SessionController($routeParams) {
+SessionController.$inject = ['$routeParams', '$firebaseObject'];
+function SessionController($routeParams, $firebaseObject) {
     var vm = this;
     vm.session = {};
 
     
     var sessionId = $routeParams.sessionId;
-    var firebase = new Firebase("https://confion.firebaseio.com/session/" + vm.sessionId);
+    var firebase = new Firebase("https://confion.firebaseio.com/session/" + sessionId);
     vm.session = $firebaseObject(firebase);
 
 }
