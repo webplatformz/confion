@@ -10,6 +10,6 @@ angular
     ])
 
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.otherwise({redirectTo: '/overview'});
+        $routeProvider.otherwise({redirectTo: '/login'});
     }]
 );
