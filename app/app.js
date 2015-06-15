@@ -4,10 +4,7 @@
 angular.module('myApp', [
   'firebase',
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.overview',
-  'myApp.version'
+  'myApp.overview'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
