@@ -16,5 +16,5 @@ angular
 SessionController.$inject = ['$routeParams'];
 function SessionController($routeParams) {
     var vm = this;
-    vm.sessionId = $routeParams.sessionId;;
+    vm.sessionId = $routeParams.sessionId;
 }
