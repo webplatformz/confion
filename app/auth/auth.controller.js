@@ -24,13 +24,16 @@ function LoginController($firebaseAuth, $rootScope, $location) {
 
     function login() {
         auth.$authWithPassword({
-            email: vm.email,
-            password: vm.password
+           // email: vm.email,
+           // password: vm.password
+            // TODO DEV MODE
+            email: 'hans@test.ch',
+            password: 'hans'
         }).then(function(authData) {
-            console.log("Logged in as:", authData.uid);
             $rootScope.user = authData.uid;
             $location.path("/");
         }).catch(function(error) {
+            // TODO show error in ui
             console.error("Authentication failed:", error);
         });
     };

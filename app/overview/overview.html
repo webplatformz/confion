@@ -1,7 +1,7 @@
 <ul class="small-block-grid-2">
     <li class="session-box" ng-repeat="message in vm.sessions">
         <a href="#/sessions/{{ message.$id }}">
-            <div class="session-box-content">
+            <div class="session-box-content" style="background-color: {{vm.getRandomColor()}}">
                 {{ message.title }}
             </div>
         </a>
