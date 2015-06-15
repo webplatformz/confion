@@ -1,6 +1,7 @@
-Available sessions: {{ vm.test }}
-
-
-<ul>
-    <li ng-repeat="message in vm.data">{{ message.title }}</li>
+<ul class="small-block-grid-2">
+    <li class="session-box" ng-repeat="message in vm.data">
+        <div class="session-box-content">
+            {{ message.title }}
+        </div>
+    </li>
 </ul>

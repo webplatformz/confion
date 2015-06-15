@@ -5,3 +5,16 @@
 div .inner-wrap {
     height: 100%;
 }
+
+.session-box {
+}
+
+.session-box-content {
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,1);
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.main-section {
+    overflow: scroll;
+}
