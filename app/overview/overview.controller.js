@@ -17,6 +17,6 @@ OverviewController.$inject = ['$firebaseArray'];
 function OverviewController($firebaseArray) {
     var vm = this;
 
-    vm.firebase = new Firebase("https://confion.firebaseio.com/session");
+    vm.firebase = new Firebase("https://confion.firebaseio.com/sessions");
     vm.sessions = $firebaseArray(vm.firebase);
 }
