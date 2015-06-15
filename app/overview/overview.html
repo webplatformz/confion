@@ -1,7 +1,9 @@
 <ul class="small-block-grid-2">
     <li class="session-box" ng-repeat="message in vm.data">
-        <div class="session-box-content">
-            {{ message.title }}
-        </div>
+        <a href="#/sessions/1">
+            <div class="session-box-content">
+                {{ message.title }}
+            </div>
+        </a>
     </li>
 </ul>

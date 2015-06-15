@@ -3,9 +3,10 @@
 angular
     .module('app', [
         'app.core',
+        'app.auth'
+        'app.overview',
+        'app.sessions'
 
-        'app.auth',
-        'app.overview'
     ])
 
     .config(['$routeProvider', function($routeProvider) {
