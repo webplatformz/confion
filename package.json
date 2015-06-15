@@ -17,7 +17,7 @@
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
-    "start" : "node server.js",
+    "start": "node server.js",
     "start_old": "node_modules/http-server/bin/http-server -p 8000",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "bower": "^1.4.1",
-    "express": "~4.9.x"
+    "express": "^4.12.4"
   }
 }
