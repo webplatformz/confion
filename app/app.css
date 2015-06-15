@@ -11,8 +11,16 @@ div .inner-wrap {
 
 .session-box-content {
     border: 2px solid white;
+    min-height: 100px;
+
 }
 
 .main-section {
     overflow: scroll;
+}
+
+.session-box a {
+    color: white;
+    font-weight: bolder;
+    text-align: center;
 }
