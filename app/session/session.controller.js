@@ -13,9 +13,8 @@ angular
 
     .controller('SessionController', SessionController);
 
-SessionController.$inject = ['$routeParams', '$firebaseArray', '$firebaseObject'];
-
-function SessionController($routeParams, $firebaseArray, $firebaseObject) {
+SessionController.$inject = ['$routeParams'];
+function SessionController($routeParams) {
     var vm = this;
     vm.session = {};
 
