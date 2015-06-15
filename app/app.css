@@ -10,8 +10,7 @@ div .inner-wrap {
 }
 
 .session-box-content {
-    margin-right: 5px;
-    margin-bottom: 5px;
+    border: 2px solid white;
 }
 
 .main-section {
