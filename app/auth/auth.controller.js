@@ -24,10 +24,6 @@ function LoginController($firebaseAuth, $rootScope, $location) {
 
     function login() {
 
-        // TODO remove when login service is available again
-        $rootScope.user = vm.email;
-        $location.path("/");
-        /*
         auth.$authWithPassword({
            // email: vm.email,
            // password: vm.password
@@ -40,6 +36,6 @@ function LoginController($firebaseAuth, $rootScope, $location) {
         }).catch(function(error) {
             // TODO show error in ui
             console.error("Authentication failed:", error);
-        });*/
+        });
     };
 }
