@@ -18,7 +18,7 @@ function OverviewController($firebaseArray) {
     var vm = this;
     vm.getRandomColor = getRandomColor;
 
-    vm.firebase = new Firebase("https://confion.firebaseio.com/session");
+    vm.firebase = new Firebase("https://confion.firebaseio.com/sessions");
     vm.sessions = $firebaseArray(vm.firebase);
 
     function getRandomColor() {
