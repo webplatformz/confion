@@ -4,19 +4,24 @@ module.exports = function(config){
         basePath : './',
 
         files : [
-            'app/view*/**/*.js'
+           /* "node_modules/requirejs/require.js",
+            "app/bower_components/angular/angular.js",
+            "app/bower_components/angular-mocks/angular-mocks.js",*/
+            'app/overview/dummy.test.js'
         ],
 
         autoWatch : true,
 
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine', 'chai'],
 
-        browsers : ['Chrome'],
+        browsers : ['PhantomJS'],
 
         plugins : [
             'karma-chrome-launcher',
             'karma-firefox-launcher',
+            'karma-phantomjs-launcher',
             'karma-jasmine',
+            'karma-chai-plugins',
             'karma-junit-reporter'
         ],
 
