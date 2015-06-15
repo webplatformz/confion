@@ -55,7 +55,7 @@ http://www.json-generator.com/
       description: '{{lorem(4, "sentences")}}',
       category: '{{random("Technology", "Project Management", "Testing", "Cloud", "Management")}}',
       lengthInMinutes: '{{random("60", "120", "180")}}',
-      presenter: '{{random(1, 2, 3)}}',
+      presenter: '{{random(1, 2, 3)}}:true',
       room: '{{ random("Room 101", "Room 42", "Room 211", "Room 111") }}',
       startTime: ""
     }
