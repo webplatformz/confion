@@ -31,7 +31,21 @@ $ bower install
 http://www.json-generator.com/
 
             
-{
+{  presenters: 
+  [
+    {
+      id: 1,
+    name: 'Darth Vader'
+    },
+    {
+      id: 2,
+    name: 'Donald Duck'
+    },
+        {
+          id: 3,
+    name: 'Luke Skywalker'
+    }
+  ],
   sessions:
   [
     '{{repeat(20)}}',
@@ -41,21 +55,10 @@ http://www.json-generator.com/
       description: '{{lorem(4, "sentences")}}',
       category: '{{random("Technology", "Project Management", "Testing", "Cloud", "Management")}}',
       lengthInMinutes: '{{random("60", "120", "180")}}',
-      presenter: '{{random("Darth Vader", "Donald Duck", "Luke Skywalker")}}',
+      presenter: '{{random(1, 2, 3)}}',
       room: '{{ random("Room 101", "Room 42", "Room 211", "Room 111") }}',
       startTime: ""
     }
-  ],
-  presenters: 
-  [
-    {
-    name: 'Darth Vader'
-    },
-    {
-    name: 'Donald Duck'
-    },
-        {
-    name: 'Luke Skywalker'
-    }
   ]
+
 }
