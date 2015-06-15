@@ -2,17 +2,21 @@
 
 angular.module('myApp.overview', ['ngRoute'])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/overview', {
-    templateUrl: 'overview/overview.html',
-    controller: 'OverviewCtrl'
-  });
-}])
+    .config(['$routeProvider', function($routeProvider) {
+      $routeProvider.when('/overview', {
+        templateUrl: 'overview/overview.html',
+        controller: 'OverviewController',
+        controllerAs: 'vm'
+      });
+    }])
 
-.controller('OverviewCtrl', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
-  $scope.test = "blub";
+    .controller('OverviewController', OverviewController);
 
-  var ref = new Firebase("https://confion.firebaseio.com/session");
+OverviewController.$inject = ['$firebaseArray'];
+function OverviewController($firebaseArray) {
+  var vm = this;
+    vm.test = 'abc';
 
-  $scope.data = $firebaseArray(ref);
-}]);
+  vm.firebase = new Firebase("https://confion.firebaseio.com/session");
+  vm.data = $firebaseArray(vm.firebase);
+}
