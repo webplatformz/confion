@@ -31,34 +31,38 @@ $ bower install
 http://www.json-generator.com/
 
             
-{  presenters: 
-  [
-    {
-      id: 1,
-    name: 'Darth Vader'
-    },
-    {
-      id: 2,
-    name: 'Donald Duck'
-    },
-        {
-          id: 3,
-    name: 'Luke Skywalker'
-    }
-  ],
-  sessions:
-  [
-    '{{repeat(20)}}',
-    {
-      id: '{{index()}}',
-      title: 'The {{random("java", "java script", "c++", "embedded")}} framework of the {{random("past", "future", "century")}}',
-      description: '{{lorem(4, "sentences")}}',
-      category: '{{random("Technology", "Project Management", "Testing", "Cloud", "Management")}}',
-      lengthInMinutes: '{{random("60", "120", "180")}}',
-      presenter: '{{random(1, 2, 3)}}:true',
-      room: '{{ random("Room 101", "Room 42", "Room 211", "Room 111") }}',
-      startTime: ""
-    }
-  ]
+{
+    presenters:
+        [
+            {
+                id: 0,
+                name: 'Darth Vader',
+                mail: '{{email([random])}}'
+            },
+            {
+                id: 1,
+                name: 'Donald Duck',
+                mail: '{{email([random])}}'
+            },
+            {
+                id: 2,
+                name: 'Luke Skywalker',
+                mail: '{{email([random])}}'
+            }
+        ],
+    sessions:
+        [
+            '{{repeat(20)}}',
+            {
+                id: '{{index()}}',
+                title: 'The {{random("java", "java script", "c++", "embedded")}} framework of the {{random("past", "future", "century")}}',
+                description: '{{lorem(4, "sentences")}}',
+                category: '{{random("Technology", "Project Management", "Testing", "Cloud", "Management")}}',
+                lengthInMinutes: '{{random("60", "120", "180")}}',
+                presenter: '{{integer([0], [2])}}',
+                room: '{{ random("Room 101", "Room 42", "Room 211", "Room 111") }}',
+                startTime: ""
+            }
+        ]
 
 }
