@@ -5,7 +5,8 @@ angular
         'app.core',
         'app.auth',
         'app.overview',
-        'app.sessions'
+        'app.sessions',
+        'app.presenters'
 
     ])
 
