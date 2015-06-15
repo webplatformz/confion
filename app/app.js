@@ -10,6 +10,15 @@ angular
     ])
 
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.otherwise({redirectTo: '/login'});
-    }]
-);
+        $routeProvider.otherwise({redirectTo: '/overview'});
+    }])
+
+    .run(['$rootScope', '$location', function($rootScope, $location) {
+        $rootScope.$on("$routeChangeStart", function(event, next, current) {
+            if($rootScope.user == null || $rootScope.user == undefined) {
+                if(next.templateUrl !== "auth/login.html") {
+                    $location.path("/login");
+                }
+            }
+        })
+    }]);

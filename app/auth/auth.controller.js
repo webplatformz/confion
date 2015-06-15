@@ -13,8 +13,8 @@ angular
 
     .controller('LoginController', LoginController);
 
-LoginController.$inject = ['$firebaseAuth'];
-function LoginController($firebaseAuth) {
+LoginController.$inject = ['$firebaseAuth', '$rootScope', '$location'];
+function LoginController($firebaseAuth, $rootScope, $location) {
     var vm = this;
     vm.login = login;
 
@@ -28,6 +28,8 @@ function LoginController($firebaseAuth) {
             password: vm.password
         }).then(function(authData) {
             console.log("Logged in as:", authData.uid);
+            $rootScope.user = authData.uid;
+            $location.path("/");
         }).catch(function(error) {
             console.error("Authentication failed:", error);
         });
