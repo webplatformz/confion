@@ -25,16 +25,21 @@ function SessionController($routeParams, $firebaseObject, $scope) {
 
     vm.session.$loaded()
         .then(function() {
-            var roomRef = new Firebase("https://confion.firebaseio.com/rooms/" + vm.session.room);
+            var roomId = vm.session.room;
+
+            var roomRef = new Firebase("https://confion.firebaseio.com/rooms/" + roomId);
             var room = $firebaseObject(roomRef);
-            room.$loaded().then(function() {
-               vm.session.room = room;
+            room.$loaded().then(function () {
+                vm.session.room = room;
+                vm.session.room.id = roomId;
             });
 
-            var presenterRef = new Firebase("https://confion.firebaseio.com/presenters/" + vm.session.presenter);
+            var presenterId = vm.session.presenter;
+            var presenterRef = new Firebase("https://confion.firebaseio.com/presenters/" + presenterId);
             var presenter = $firebaseObject(presenterRef);
             presenter.$loaded().then(function() {
                 vm.session.presenter = presenter;
+                vm.session.presenter.id = presenterId;
             });
         })
         .catch(function(err) {
