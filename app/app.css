@@ -38,3 +38,40 @@ div .inner-wrap {
     margin-top: 5px;
     font-weight: bold;
 }
+
+.schedule {
+    list-style-type: none;
+    width: 50px;
+}
+
+.schedule li {
+    color: orange;
+    border-bottom: 1px solid orange;
+    height: 30px;
+}
+
+.sessionLane {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.sessionLane li {
+    border-bottom: 1px solid orange;
+}
+
+.session1 {
+    height: 30px;
+}
+
+.session2 {
+    height: 60px;
+}
+
+.session3 {
+    height: 90px;
+}
+
+.session4 {
+    height: 120px;
+}
