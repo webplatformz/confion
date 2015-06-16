@@ -11,15 +11,15 @@ angular
         });
     }])
 
-    .controller('OverviewController', OverviewController);
+    .controller('OverviewController', OverviewController)
 
-OverviewController.$inject = ['$firebaseArray'];
-function OverviewController($firebaseArray) {
+    .$inject = ['sessionService'];
+
+function OverviewController(sessionService) {
     var vm = this;
-    vm.getRandomColor = getRandomColor;
 
-    vm.firebase = new Firebase("https://confion.firebaseio.com/sessions");
-    vm.sessions = $firebaseArray(vm.firebase);
+    vm.getRandomColor = getRandomColor;
+    vm.sessions = sessionService.getSessions();
 
     function getRandomColor(index) {
         var colors = ["green", "blue", "red", "purple", "orange"];

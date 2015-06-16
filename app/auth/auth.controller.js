@@ -11,9 +11,10 @@ angular
         });
     }])
 
-    .controller('LoginController', LoginController);
+    .controller('LoginController', LoginController)
 
-LoginController.$inject = ['$firebaseAuth', '$rootScope', '$location', 'localStorageService'];
+    .$inject = ['$firebaseAuth', '$rootScope', '$location', 'localStorageService'];
+
 function LoginController($firebaseAuth, $rootScope, $location, localStorageService) {
     var vm = this;
     vm.login = login;

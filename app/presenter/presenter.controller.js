@@ -11,37 +11,23 @@ angular
       });
     }])
 
-    .controller('PresenterController', PresenterController);
+    .controller('PresenterController', PresenterController)
 
-PresenterController.$inject = ['$routeParams', '$firebaseObject'];
-function PresenterController($routeParams, $firebaseObject) {
+    .$inject = ['$routeParams', 'presenterService', 'sessionService'];
+
+function PresenterController($routeParams, presenterService, sessionService) {
     var vm = this;
 
-    var presenterId = $routeParams.presenterId;
-    var presenterRef = new Firebase("https://confion.firebaseio.com/presenters/" + presenterId);
-
-    presenterRef.once('value', function(presenterSnapshot) {
-        var sessions = [];
-        vm.presenter = presenterSnapshot.val();
-        angular.forEach(vm.presenter.sessions, function(value, key) {
-            var sessionRef = new Firebase("https://confion.firebaseio.com/sessions/" + key);
-            sessionRef.once('value', function(sessionSnapshot) {
-                var session = {};
-                session.key = key;
-                session.title = sessionSnapshot.val().title;
-                sessions.push(session);
-            });
-        });
-        vm.presenter.sessions = sessions;
-    });
-
-    /*vm.presenter = $firebaseObject(presenterRef);
-
-    vm.presenter.$loaded().then(function () {
-       angular.forEach(vm.presenter.sessions, function(value, key) {
-           var sessionRef = new Firebase("https://confion.firebaseio.com/sessions/" + key);
-           vm.presenter.sessions.
-           title = $firebaseObject(sessionRef);
+    var presenterPromise = presenterService.getPresenter($routeParams.presenterId);
+    presenterPromise.then(function(presenter) {
+        vm.presenter = presenter;
+        var sessionPromise = sessionService.getSessionsByPresentor(presenter);
+        sessionPromise.then(function(sessions) {
+            vm.presenter.sessions = sessions;
+        }, function(reason) {
+            console.log('Error: ' + reason);
         })
-    });*/
+    }, function(reason) {
+        console.log('Error: ' + reason);
+    });
 }

@@ -11,9 +11,10 @@ angular
       });
     }])
 
-    .controller('SessionController', SessionController);
+    .controller('SessionController', SessionController)
 
-SessionController.$inject = ['$routeParams', '$firebaseObject'];
+    .$inject = ['$routeParams', '$firebaseObject'];
+
 function SessionController($routeParams, $firebaseObject) {
     var vm = this;
     vm.session = {};
