@@ -1,4 +1,22 @@
-<div class="row">
+<div class="row" style="background-image: url('timeline/schedule-background.png')">
+    <div class="large-1 small-1 columns">
+        <ul class="schedule">
+            <li ng-repeat="time in vm.times">{{ time }}</li>
+        </ul>
+    </div>
+
+
+    <div class="large-2 small-4 columns" ng-repeat="room in vm.rooms">
+        <ul class="sessionLane">
+            <li ng-repeat="session in vm.sessionsByRoom(room)" style="height: {{session.heightPx}}px;">{{ session.title }}</li>
+        </ul>
+    </div>
+
+</div>
+
+
+<!--
+<div class="row" style="background-image: url('timeline/schedule-background.png')">
     <div class="large-1 small-1 columns">
         <ul class="schedule">
             <li>8:00</li>
@@ -27,4 +45,4 @@
             <li class="session1">session2</li>
         </ul>
     </div>
-</div>
+</div>-->

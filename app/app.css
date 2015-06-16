@@ -46,7 +46,6 @@ div .inner-wrap {
 
 .schedule li {
     color: orange;
-    border-bottom: 1px solid orange;
     height: 30px;
 }
 
@@ -57,7 +56,7 @@ div .inner-wrap {
 }
 
 .sessionLane li {
-    border-bottom: 1px solid orange;
+
 }
 
 .session1 {
