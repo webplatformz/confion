@@ -17,7 +17,7 @@ function sessionService($q, $firebaseArray) {
 
     function getSession(sessionId) {
         var def = $q.defer();
-        var sessionRef = new Firebase('https://confion.firebaseio.com/sessions' + sessionId);
+        var sessionRef = new Firebase('https://confion.firebaseio.com/sessions/' + sessionId);
         sessionRef.once('value', function(sessionSnapshot) {
             def.resolve(sessionSnapshot.val());
         });

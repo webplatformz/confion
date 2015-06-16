@@ -22,10 +22,10 @@ function PresenterController($routeParams, presenterService, sessionService) {
     presenterPromise.then(function(presenter) {
         vm.presenter = presenter;
 
+        // TODO no sessions here on presenter
         var sessionPromise = sessionService.getSessionsByPresentor(presenter);
         sessionPromise.then(function(sessions) {
             vm.presenter.sessions = sessions;
-
         }, function(reason) {
             console.log('Error: ' + reason);
         })

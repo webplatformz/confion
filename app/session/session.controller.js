@@ -19,11 +19,9 @@ function SessionController($routeParams, $firebaseObject, sessionService) {
     var vm = this;
     vm.session = {};
 
-    console.log($routeParams.sessionId);
     var sessionPromise = sessionService.getSession($routeParams.sessionId);
     sessionPromise.then(function(session) {
         vm.session = session;
-        console.log(session);
         var roomId = vm.session.room;
 
         var roomRef = new Firebase("https://confion.firebaseio.com/rooms/" + roomId);
