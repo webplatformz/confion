@@ -6,7 +6,8 @@ angular
         'app.auth',
         'app.overview',
         'app.sessions',
-        'app.presenters'
+        'app.presenters',
+        'app.timeline'
 
     ])
 
