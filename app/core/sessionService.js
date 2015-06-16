@@ -3,26 +3,42 @@ angular
 
     .factory('sessionService', sessionService)
 
-    .$inject = ['$firebaseArray', '$q'];
+    .$inject = ['$q'];
 
-function sessionService($firebaseArray, $q) {
+function sessionService($q) {
 
     var service = {
-       getSessions : getSessions,
+        getSession : getSession,
+        getSessions : getSessions,
         getSessionsByPresentor : getSessionsByPresentor
     };
 
     return service;
 
+    function getSession(sessionId) {
+        var def = $q.defer();
+        var sessionRef = new Firebase('https://confion.firebaseio.com/sessions' + sessionId);
+        sessionRef.once('value', function(sessionSnapshot) {
+            def.resolve(sessionSnapshot.val());
+        });
+        return def.promise;
+    }
+
     function getSessions() {
-        return $firebaseArray(new Firebase("https://confion.firebaseio.com/sessions"));
+        var sessions = [];
+        var def = $q.defer();
+        var sessionRef = new Firebase('https://confion.firebaseio.com/sessions');
+        sessionRef.once('value', function(sessionsSnapshot) {
+            def.resolve(sessionsSnapshot.val());
+        });
+        return def.promise;
     }
 
     function getSessionsByPresentor(presenter) {
         var def = $q.defer();
         var sessions = [];
         angular.forEach(presenter.sessions, function(value, key) {
-            var sessionRef = new Firebase("https://confion.firebaseio.com/sessions/" + key);
+            var sessionRef = new Firebase('https://confion.firebaseio.com/sessions');
             sessionRef.once('value', function(sessionSnapshot) {
                 var session = {};
                 session.key = key;
@@ -33,6 +49,4 @@ function sessionService($firebaseArray, $q) {
         def.resolve(sessions);
         return def.promise;
     }
-
-
 }
