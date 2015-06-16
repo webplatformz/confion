@@ -3,9 +3,9 @@ angular
 
     .factory('sessionService', sessionService)
 
-    .$inject = ['$q'];
+    .$inject = ['$q', '$firebaseArray'];
 
-function sessionService($q) {
+function sessionService($q, $firebaseArray) {
 
     var service = {
         getSession : getSession,
@@ -25,7 +25,6 @@ function sessionService($q) {
     }
 
     function getSessions() {
-        var sessions = [];
         var def = $q.defer();
         var sessionRef = new Firebase('https://confion.firebaseio.com/sessions');
         sessionRef.once('value', function(sessionsSnapshot) {
