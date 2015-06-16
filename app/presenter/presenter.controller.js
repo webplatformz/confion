@@ -18,9 +18,6 @@ function PresenterController($routeParams, $firebaseObject) {
     var vm = this;
 
     var presenterId = $routeParams.presenterId;
-    var firebase = new Firebase("https://confion.firebaseio.com/presenters/" + presenterId);
-    vm.presenter = $firebaseObject(firebase);
-
-
-
+    var presenterRef = new Firebase("https://confion.firebaseio.com/presenters/" + presenterId);
+    vm.presenter = $firebaseObject(presenterRef);
 }

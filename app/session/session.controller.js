@@ -20,6 +20,6 @@ function SessionController($routeParams, $firebaseObject) {
 
 
     var sessionId = $routeParams.sessionId;
-    var firebase = new Firebase("https://confion.firebaseio.com/sessions/" + sessionId);
-    vm.session = $firebaseObject(firebase);
+    var sessionRef = new Firebase("https://confion.firebaseio.com/sessions/" + sessionId);
+    vm.session = $firebaseObject(sessionRef);
 }
