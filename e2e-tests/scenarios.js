@@ -1,6 +1,7 @@
 'use strict';
 
 var LoginPage = require('./accessors/auth.login.accessor.js');
+var OverviewPage = require('./accessors/overview.overview.accessor');
 
 describe('my app', function() {
 
@@ -28,7 +29,10 @@ describe('my app', function() {
       }, 10000);
 
       expect(browser.getLocationAbsUrl()).toMatch("/overview");
+
+
+      var overviewPage = new OverviewPage();
+      overviewPage.waitForOverviewView();
+      overviewPage.selectSession();
   });
-
-
 });
