@@ -1,4 +1,28 @@
 {
+  "rooms": {
+    "0": {
+      "name" : "Room 101",
+      "size" : "40"
+    },
+    "1": {
+      "name" : "Room 111",
+      "size" : "40"
+    },
+
+    "2": {
+      "name" : "Room 201",
+      "size" : "60"
+    },
+    "3": {
+      "name" : "Room 301",
+      "size" : "100"
+    },
+    "4": {
+      "name" : "Room 311",
+      "size" : "40"
+    }
+  },
+
   "presenters": [
     {
       "id": 0,
@@ -50,7 +74,7 @@
       "category": "Testing",
       "lengthInMinutes": 120,
       "presenter": 0,
-      "room": "Room 101",
+      "room": 0,
       "startTime": ""
     },
     {
@@ -60,7 +84,7 @@
       "category": "Management",
       "lengthInMinutes": 180,
       "presenter": 2,
-      "room": "Room 111",
+      "room": 1,
       "startTime": ""
     },
     {
@@ -70,7 +94,7 @@
       "category": "Cloud",
       "lengthInMinutes": 60,
       "presenter": 0,
-      "room": "Room 111",
+      "room": 2,
       "startTime": ""
     },
     {
@@ -80,7 +104,7 @@
       "category": "Project Management",
       "lengthInMinutes": 60,
       "presenter": 1,
-      "room": "Room 111",
+      "room": 3,
       "startTime": ""
     },
     {
@@ -90,7 +114,7 @@
       "category": "Cloud",
       "lengthInMinutes": 180,
       "presenter": 0,
-      "room": "Room 42",
+      "room": 4,
       "startTime": ""
     },
     {
@@ -100,7 +124,7 @@
       "category": "Technology",
       "lengthInMinutes": 180,
       "presenter": 0,
-      "room": "Room 42",
+      "room": 0,
       "startTime": ""
     },
     {
@@ -110,7 +134,7 @@
       "category": "Testing",
       "lengthInMinutes": 60,
       "presenter": 0,
-      "room": "Room 111",
+      "room": 1,
       "startTime": ""
     },
     {
@@ -120,7 +144,7 @@
       "category": "Management",
       "lengthInMinutes": 120,
       "presenter": 2,
-      "room": "Room 101",
+      "room": 2,
       "startTime": ""
     },
     {
@@ -130,7 +154,7 @@
       "category": "Technology",
       "lengthInMinutes": 180,
       "presenter": 2,
-      "room": "Room 42",
+      "room": 3,
       "startTime": ""
     },
     {
@@ -140,7 +164,7 @@
       "category": "Management",
       "lengthInMinutes": 120,
       "presenter": 1,
-      "room": "Room 42",
+      "room": 4,
       "startTime": ""
     },
     {
@@ -150,7 +174,7 @@
       "category": "Testing",
       "lengthInMinutes": 120,
       "presenter": 1,
-      "room": "Room 111",
+      "room": 0,
       "startTime": ""
     },
     {
@@ -160,7 +184,7 @@
       "category": "Cloud",
       "lengthInMinutes": 180,
       "presenter": 0,
-      "room": "Room 42",
+      "room": 1,
       "startTime": ""
     },
     {
@@ -170,7 +194,7 @@
       "category": "Management",
       "lengthInMinutes": 120,
       "presenter": 2,
-      "room": "Room 101",
+      "room": 2,
       "startTime": ""
     },
     {
@@ -180,7 +204,7 @@
       "category": "Management",
       "lengthInMinutes": 180,
       "presenter": 2,
-      "room": "Room 42",
+      "room": 3,
       "startTime": ""
     },
     {
@@ -190,7 +214,7 @@
       "category": "Testing",
       "lengthInMinutes": 120,
       "presenter": 2,
-      "room": "Room 111",
+      "room": 4,
       "startTime": ""
     },
     {
@@ -200,7 +224,7 @@
       "category": "Cloud",
       "lengthInMinutes": 60,
       "presenter": 0,
-      "room": "Room 101",
+      "room": 0,
       "startTime": ""
     },
     {
@@ -210,7 +234,7 @@
       "category": "Project Management",
       "lengthInMinutes": 60,
       "presenter": 0,
-      "room": "Room 101",
+      "room": 1,
       "startTime": ""
     },
     {
@@ -220,7 +244,7 @@
       "category": "Management",
       "lengthInMinutes": 60,
       "presenter": 2,
-      "room": "Room 101",
+      "room": 2,
       "startTime": ""
     },
     {
@@ -230,7 +254,7 @@
       "category": "Management",
       "lengthInMinutes": 120,
       "presenter": 2,
-      "room": "Room 101",
+      "room": 3,
       "startTime": ""
     },
     {
@@ -240,7 +264,7 @@
       "category": "Testing",
       "lengthInMinutes": 180,
       "presenter": 0,
-      "room": "Room 101",
+      "room": 4,
       "startTime": ""
     }
   ]
