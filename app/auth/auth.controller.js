@@ -13,8 +13,8 @@ angular
 
     .controller('LoginController', LoginController);
 
-LoginController.$inject = ['$firebaseAuth', '$rootScope', '$location'];
-function LoginController($firebaseAuth, $rootScope, $location) {
+LoginController.$inject = ['$firebaseAuth', '$rootScope', '$location', 'localStorageService'];
+function LoginController($firebaseAuth, $rootScope, $location, localStorageService) {
     var vm = this;
     vm.login = login;
 
@@ -32,7 +32,9 @@ function LoginController($firebaseAuth, $rootScope, $location) {
             password: 'hans'
         }).then(function(authData) {
             $rootScope.user = authData.uid;
+            localStorageService.set("user", authData.uid);
             $location.path("/");
+
         }).catch(function(error) {
             // TODO show error in ui
             console.error("Authentication failed:", error);

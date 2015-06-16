@@ -14,9 +14,14 @@ angular
         $routeProvider.otherwise({redirectTo: '/overview'});
     }])
 
-    .run(['$rootScope', '$location', function($rootScope, $location) {
+    .run(['$rootScope', '$location', 'localStorageService', function($rootScope, $location, localStorageService)  {
         $rootScope.$on("$routeChangeStart", function(event, next, current) {
-            if($rootScope.user == null || $rootScope.user == undefined) {
+            var user = $rootScope.user;
+            if(user == null || user == undefined) {
+                user = localStorageService.get("user");
+            }
+
+            if(user == null || user == undefined) {
                 if(next.templateUrl !== "auth/login.html") {
                     $location.path("/login");
                 }
