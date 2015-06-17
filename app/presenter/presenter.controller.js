@@ -18,10 +18,7 @@ angular
 function PresenterController($routeParams, presenterService, sessionService) {
     var vm = this;
 
-    var presenterPromise = presenterService.getPresenter($routeParams.presenterId);
-    presenterPromise.then(function(presenter) {
+    presenterService.getPresenter($routeParams.presenterId).then(function(presenter) {
         vm.presenter = presenter;
-    }, function(reason) {
-        console.log('Error: ' + reason);
     });
 }

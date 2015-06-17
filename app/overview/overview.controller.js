@@ -20,11 +20,8 @@ function OverviewController(sessionService) {
 
     vm.getRandomColor = getRandomColor;
 
-    var promise = sessionService.getSessions();
-    promise.then(function(sessions) {
+    sessionService.getSessions().then(function(sessions) {
         vm.sessions = sessions;
-    }, function(error) {
-       console.log(error);
     });
 
     function getRandomColor(index) {

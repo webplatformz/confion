@@ -19,18 +19,15 @@ function SessionController($routeParams, sessionService, presenterService, roomS
     var vm = this;
     vm.session = {};
 
-    var sessionPromise = sessionService.getSession($routeParams.sessionId);
-    sessionPromise.then(function(session) {
+    sessionService.getSession($routeParams.sessionId).then(function(session) {
         vm.session = session;
         var roomId = vm.session.room;
-        var roomPromise = roomService.getRoom(roomId);
-        roomPromise.then(function (room) {
+        roomService.getRoom(roomId).then(function (room) {
             vm.session.room = room;
         });
 
         var presenterId = vm.session.presenter;
-        var promise = presenterService.getPresenter(presenterId);
-        promise.then(function (presenter) {
+        presenterService.getPresenter(presenterId).then(function (presenter) {
             vm.session.presenter = presenter;
         });
 
