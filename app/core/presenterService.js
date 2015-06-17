@@ -3,9 +3,9 @@ angular
 
     .factory('presenterService', presenterService)
 
-    .$inject = ['$q'];
+    .$inject = ['$q', 'sessionService', '$firebaseObject'];
 
-function presenterService($q) {
+function presenterService($q, sessionService, $firebaseObject) {
 
     var service = {
        getPresenter : getPresenter
@@ -16,19 +16,12 @@ function presenterService($q) {
     function getPresenter(presenterId) {
         var def = $q.defer();
         var presenterRef = new Firebase("https://confion.firebaseio.com/presenters/" + presenterId);
-        presenterRef.once('value', function(presenterSnapshot) {
-            var sessions = [];
-            var presenter = presenterSnapshot.val();
-            angular.forEach(presenter.sessions, function(value, key) {
-                var sessionRef = new Firebase("https://confion.firebaseio.com/sessions/" + key);
-                sessionRef.once('value', function(sessionSnapshot) {
-                    var session = {};
-                    session.key = key;
-                    session.title = sessionSnapshot.val().title;
-                    sessions.push(session);
-                });
+        var presenter = $firebaseObject(presenterRef);
+        presenter.$loaded().then(function() {
+            var promise = sessionService.getSessionsByPresentor(presenter);
+            promise.then(function (sessions) {
+                presenter.sessions = sessions;
             });
-            presenter.sessions = sessions;
             def.resolve(presenter);
         });
         return def.promise;
