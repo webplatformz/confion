@@ -13,9 +13,9 @@ angular
 
     .controller('SessionController', SessionController)
 
-    .$inject = ['$routeParams', '$firebaseObject', 'sessionService'];
+    .$inject = ['$routeParams', 'sessionService', 'presenterService', 'roomService'];
 
-function SessionController($routeParams, $firebaseObject, sessionService) {
+function SessionController($routeParams, sessionService, presenterService, roomService) {
     var vm = this;
     vm.session = {};
 
@@ -23,20 +23,15 @@ function SessionController($routeParams, $firebaseObject, sessionService) {
     sessionPromise.then(function(session) {
         vm.session = session;
         var roomId = vm.session.room;
-
-        var roomRef = new Firebase("https://confion.firebaseio.com/rooms/" + roomId);
-        var room = $firebaseObject(roomRef);
-        room.$loaded().then(function () {
+        var roomPromise = roomService.getRoom(roomId);
+        roomPromise.then(function (room) {
             vm.session.room = room;
-            vm.session.room.id = roomId;
         });
 
         var presenterId = vm.session.presenter;
-        var presenterRef = new Firebase("https://confion.firebaseio.com/presenters/" + presenterId);
-        var presenter = $firebaseObject(presenterRef);
-        presenter.$loaded().then(function() {
+        var promise = presenterService.getPresenter(presenterId);
+        promise.then(function (presenter) {
             vm.session.presenter = presenter;
-            vm.session.presenter.id = presenterId;
         });
 
     }, function(reason) {

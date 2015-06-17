@@ -21,7 +21,6 @@ function PresenterController($routeParams, presenterService, sessionService) {
     var presenterPromise = presenterService.getPresenter($routeParams.presenterId);
     presenterPromise.then(function(presenter) {
         vm.presenter = presenter;
-        console.log(presenter);
     }, function(reason) {
         console.log('Error: ' + reason);
     });
