@@ -3,13 +3,14 @@ angular
 
     .factory('sessionService', sessionService)
 
-    .$inject = ['$q', '$firebaseObject'];
+    .$inject = ['$q'];
 
-function sessionService($q, $firebaseObject) {
+function sessionService($q) {
 
     var service = {
         getSession : getSession,
         getSessions : getSessions,
+        getSessionsOrderedByDateTime : getSessionsOrderedByDateTime,
         getSessionsByPresentor : getSessionsByPresentor
     };
 
@@ -28,6 +29,15 @@ function sessionService($q, $firebaseObject) {
         var def = $q.defer();
         var sessionRef = new Firebase('https://confion.firebaseio.com/sessions');
         sessionRef.once('value', function(sessionsSnapshot) {
+            def.resolve(sessionsSnapshot.val());
+        });
+        return def.promise;
+    }
+
+    function getSessionsOrderedByDateTime() {
+        var def = $q.defer();
+        var sessionRef = new Firebase('https://confion.firebaseio.com/sessions');
+        sessionRef.orderByChild('startTime').once('value', function(sessionsSnapshot) {
             def.resolve(sessionsSnapshot.val());
         });
         return def.promise;
