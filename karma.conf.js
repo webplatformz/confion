@@ -4,10 +4,17 @@ module.exports = function(config){
         basePath : './',
 
         files : [
-           /* "node_modules/requirejs/require.js",
-            "app/bower_components/angular/angular.js",
-            "app/bower_components/angular-mocks/angular-mocks.js",*/
-            'app/overview/dummy.test.js'
+            'app/bower_components/angular/angular.js',
+            'app/bower_components/angular-mocks/angular-mocks.js',
+            'app/bower_components/angular-route/angular-route.js',
+            'app/bower_components/angularfire/dist/angularfire.min.js',
+            'app/bower_components/firebase/firebase.js',
+            'app/bower_components/angular-local-storage/dist/angular-local-storage.min.js',
+
+            'app/app.js',
+            'app/core/app.core.js',
+            'app/core/sessionService.js',
+            'app/core/sessionService.spec.js'
         ],
 
         autoWatch : true,
