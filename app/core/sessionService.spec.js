@@ -13,6 +13,7 @@ describe("sessionService", function() {
             var deferred = _$q_.defer();
 
             deferred.resolve(data);
+            spyOn(sessionService, 'getSessionsOrderedByDateTime').and.returnValue(deferred.promise);
         })
     });
 
