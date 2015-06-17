@@ -13,32 +13,19 @@ angular
 
     .controller('LoginController', LoginController)
 
-    .$inject = ['$firebaseAuth', '$rootScope', '$location', 'localStorageService'];
+    .$inject = ['authService'];
 
-function LoginController($firebaseAuth, $rootScope, $location, localStorageService) {
+function LoginController(authService) {
     var vm = this;
     vm.login = login;
 
-    var ref = new Firebase("https://confion.firebaseio.com");
-    var auth = $firebaseAuth(ref);
-
 
     function login() {
-
-        auth.$authWithPassword({
-           // email: vm.email,
-           // password: vm.password
-            // TODO DEV MODE
-            email: 'hans@test.ch',
-            password: 'hans'
-        }).then(function(authData) {
-            $rootScope.user = authData.uid;
-            localStorageService.set("user", authData.uid);
-            $location.path("/");
-
-        }).catch(function(error) {
-            // TODO show error in ui
-            console.error("Authentication failed:", error);
-        });
+        // email: vm.email,
+        // password: vm.password
+        // TODO DEV MODE
+        var email = 'hans@test.ch';
+        var password =  'hans';
+        authService.login(email, password);
     };
 }

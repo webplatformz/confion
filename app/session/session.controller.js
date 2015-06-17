@@ -17,6 +17,15 @@ angular
 
 function SessionController($routeParams, sessionService, presenterService, roomService) {
     var vm = this;
+
+    vm.attend = function () {
+        /*var ref = new Firebase("https://<YOUR-FIREBASE-APP>.firebaseio.com");
+        var authData = ref.getAuth();
+        if (authData) {
+            console.log("Authenticated user with uid:", authData.uid);
+        }*/
+    };
+
     vm.session = {};
 
     sessionService.getSession($routeParams.sessionId).then(function(session) {

@@ -29,3 +29,12 @@
     <div class="small-12 large-3 columns session-header">Time</div>
     <div class="small-12 large-9 columns ">{{ vm.session.startTime }}</div>
 </div>
+
+<div class="row">
+    <button ng-click="vm.attend()">Attend</button>
+</div>
+
+<div class="row">
+    <div class="small-12 large-3 columns session-header">Attendes</div>
+    <div class="small-12 large-9 columns ">{{ vm.session.attendees }}</div>
+</div>
