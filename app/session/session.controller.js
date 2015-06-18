@@ -13,19 +13,21 @@ angular
 
     .controller('SessionController', SessionController)
 
-    .$inject = ['$routeParams', 'sessionService', 'presenterService', 'roomService', 'authService', '$firebaseArray'];
+    .$inject = ['$routeParams', 'sessionService', 'presenterService', 'roomService', 'authService', '$firebaseArray', 'userService'];
 
-function SessionController($routeParams, sessionService, presenterService, roomService, authService, $firebaseArray) {
+function SessionController($routeParams, sessionService, presenterService, roomService, authService, $firebaseArray, userService) {
     var vm = this;
 
     vm.session = {};
 
     vm.attend = function () {
-        authService.register('Hans', 'Meier', 'hans2@test.ch');
-        var user = authService.getCurrentUser();
-        var list = $firebaseArray(new Firebase('https://confion.firebaseio.com/sessions/' + $routeParams.sessionId + '/attendees'));
-        list.$add(user);
-        vm.session.attendees = list;
+        var userId = authService.getCurrentUser().uid;
+        userService.getUser(userId).then(function (user) {
+            var list = $firebaseArray(new Firebase('https://confion.firebaseio.com/sessions/' + $routeParams.sessionId + '/attendees'));
+            list.$add(user);
+            console.log(userId);
+            vm.session.attendees = list;
+        });
     };
 
     sessionService.getSession($routeParams.sessionId).then(function(session) {

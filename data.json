@@ -300,5 +300,13 @@
       "room": 4,
       "startTime": ""
     }
-  ]
+  ],
+  "users" : {
+    "simplelogin:15" : {
+      "email" : "hans2@test.ch",
+      "firstname" : "Hans",
+      "lastname" : "Meier"
+    }
+  }
 }
+
