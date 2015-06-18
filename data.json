@@ -302,8 +302,8 @@
     }
   ],
   "users" : {
-    "simplelogin:15" : {
-      "email" : "hans2@test.ch",
+    "simplelogin:14" : {
+      "email" : "hans@test.ch",
       "firstname" : "Hans",
       "lastname" : "Meier"
     },
