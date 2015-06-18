@@ -19,6 +19,8 @@ function OverviewController(sessionService, colorService) {
     var vm = this;
 
     vm.getColor = colorService.getColor;
+    vm.getTextColor = colorService.getTextColor;
+    vm.getBorderColor = colorService.getBorderColor;
 
     sessionService.getSessions().then(function(sessions) {
         vm.sessions = sessions;

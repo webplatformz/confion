@@ -82,7 +82,9 @@ function TimelineController(roomService, sessionService, colorService, $routePar
                 "id" : session.id,
                 "title" : session.title,
                 "heightPx": getHeightInPx(sessionDate, sessionEnd),
-                "color" : colorService.getColor(session.category)
+                "color" : colorService.getColor(session.category),
+                "borderColor" : colorService.getBorderColor(session.category),
+                "textColor" : colorService.getTextColor(session.category)
             });
 
             startTime = sessionEnd;

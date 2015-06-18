@@ -18,7 +18,7 @@
         <ul class="sessionLane">
             <li ng-repeat="session in vm.sessionsByRoomViewModel[room.id]" style="height: {{session.heightPx}}px;">
                 <a href="#/sessions/{{session.id}}">
-                    <div class="scheduleSessionItem" ng-if="session.title != ''" ng-style="{'background-color' : session.color}">
+                    <div class="scheduleSessionItem" ng-if="session.title != ''" ng-style="{'background-color' : session.color, 'border-color' : session.borderColor, 'color' : session.textColor}">
                         {{ session.title }}
                     </div>
                 </a>

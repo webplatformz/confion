@@ -67,13 +67,11 @@ div .inner-wrap {
 }
 
 .scheduleSessionItem {
-    background-color: lightcoral;
     padding: 3px;
     height: 100%;
+    border-radius: 2px;
     font-size: small;
     text-align: center;
-    border-radius: 10px;
     font-weight: bold;
-    border: white solid 1px;
-    color: black;
+    border: orange solid 1px;
 }
