@@ -306,6 +306,18 @@
       "email" : "hans2@test.ch",
       "firstname" : "Hans",
       "lastname" : "Meier"
+    },
+    "simplelogin:16" : {
+      "email" : "joachim.prinzbach@zuehlke.com",
+      "firstname" : "Joachim",
+      "lastname" : "Prinzbach",
+      "password" : ")cNNCHt^hb4A50qj"
+    },
+    "simplelogin:17" : {
+      "email" : "daniel.suter@zuehlke.com",
+      "firstname" : "Daniel",
+      "lastname" : "Suter",
+      "password" : "LAN3NKDCxtbd!u@A"
     }
   }
 }
