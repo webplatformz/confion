@@ -38,6 +38,7 @@ function SessionController($routeParams, sessionService, presenterService, roomS
 
     sessionService.getSession($routeParams.sessionId).then(function(session) {
         vm.session = session;
+        vm.session.endTime = new Date(new Date(session.startTime).getTime() + session.lengthInMinutes * 60000);
 
         list = $firebaseArray(new Firebase('https://confion.firebaseio.com/sessions/' + $routeParams.sessionId + '/attendees'));
         vm.session.attendees = list;
