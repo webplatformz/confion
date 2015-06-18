@@ -33,8 +33,8 @@
 </div>
 
 <div class="row">
-    <button ng-click="vm.attend()">Attend</button>
-    <button ng-click="vm.removeAttendee()">Dont attend</button>
+    <button ng-show="vm.attend" ng-click="vm.attend()">Attend</button>
+    <button ng-hide="vm.attend" ng-click="vm.removeAttendee()">Dont attend</button>
 </div>
 
 <div class="row">
