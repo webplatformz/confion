@@ -1,18 +1,27 @@
-<div class="row" style="background-image: url('timeline/schedule-background.png')">
-    <div class="large-1 small-1 columns">
+<div class="row" style="font-weight: bolder;">
+    <div class="large-1 small-4 columns">Zeit</div>
+
+    <div class="large-2 small-8 columns" ng-repeat="room in vm.rooms">
+        {{ room.name }}
+    </div>
+</div>
+
+<div class="row" style="background-image: url('timeline/schedule-background.png');">
+    <div class="large-1 small-4 columns">
         <ul class="schedule">
             <li ng-repeat="time in vm.times">{{ time }}</li>
         </ul>
     </div>
 
 
-    <div class="large-2 small-4 columns" ng-repeat="room in vm.rooms">
+    <div class="large-2 small-8 columns" ng-repeat="room in vm.rooms">
         <ul class="sessionLane">
             <li ng-repeat="session in vm.sessionsByRoomViewModel[room.id]" style="height: {{session.heightPx}}px;">
-
-                <div class="scheduleSessionItem" ng-if="session.title != ''">
-                    {{ session.title }}
-                </div>
+                <a href="#/sessions/{{session.id}}">
+                    <div class="scheduleSessionItem" ng-if="session.title != ''">
+                        {{ session.title }}
+                    </div>
+                </a>
             </li>
         </ul>
     </div>

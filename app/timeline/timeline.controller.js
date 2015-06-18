@@ -70,6 +70,7 @@ function TimelineController(roomService, sessionService) {
             // Add session
             var sessionEnd = new Date(sessionDate.getTime() + session.lengthInMinutes * 60000);
             roomViewModel.push({
+                "id" : session.id,
                 "title" : session.title,
                 "heightPx": getHeightInPx(sessionDate, sessionEnd)
             });
