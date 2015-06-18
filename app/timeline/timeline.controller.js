@@ -12,33 +12,45 @@ angular
     }])
 
     .controller('TimelineController', TimelineController);
-
-function TimelineController($firebaseArray) {
+// TODO inject
+function TimelineController(roomService, sessionService) {
     var vm = this;
     vm.times = [];
-    vm.rooms = [0, 1, 2, 3, 4]
+    vm.rooms = [];
+    vm.sessionsByRoomViewModel = {};
 
 
-    var sessions = [
-        {
-            title: "session 1",
-            lengthInMinutes: 60,
-            startTime: "2015-09-24T09:30:00.000Z",
-            room: 0
-        },
-        {
-            title: "session 2",
-            lengthInMinutes: 60,
-            startTime: "2015-09-24T10:45:00.000Z",
-            room: 0
-        },
-        {
-            title: "session 3",
-            lengthInMinutes: 120,
-            startTime: "2015-09-24T14:30:00.000Z",
-            room: 0
+    var init = function() {
+        createSchedule();
+    };
+
+    var createSchedule = function() {
+        for(var time = 8; time < 19; time++) {
+            vm.times.push(time + ":00")
+            vm.times.push(time + ":30")
         }
-    ];
+    };
+
+    roomService.getRooms().then(function(rooms) {
+       vm.rooms = rooms;
+    });
+
+    var sessionsByRoomId = {};
+    sessionService.getSessionsOrderedByDateTime().then(function (sessions) {
+        angular.forEach(sessions, function (session) {
+            if (sessionsByRoomId[session.room] == undefined) {
+                sessionsByRoomId[session.room] = [];
+            }
+
+            if(session.startTime != "") {
+                sessionsByRoomId[session.room].push(session);
+            }
+        });
+    }).then(function() {
+        angular.forEach(vm.rooms, function(room) {
+            vm.sessionsByRoomViewModel[room.id] = createViewModel(sessionsByRoomId[room.id]);
+        });
+    });
 
     var getHeightInPx = function(startTime, sessionDate) {
         var differenceMilis = sessionDate - startTime;
@@ -47,20 +59,15 @@ function TimelineController($firebaseArray) {
         return heightPx;
     };
 
-    var init = function() {
-        for(var time = 8; time < 19; time++) {
-            vm.times.push(time + ":00")
-            vm.times.push(time + ":30")
-        }
-
-        var room1 = [];
+    var createViewModel = function(sessions) {
+        var roomViewModel = [];
         var startTime = new Date(Date.UTC(2015, 8, 24, 8, 0, 0));
         var title = "";
         angular.forEach(sessions, function(session) {
             var sessionDate = new Date(session.startTime);
 
             if(startTime.getTime() != sessionDate.getTime()) {
-                room1.push({
+                roomViewModel.push({
                     "title": title,
                     "heightPx" : getHeightInPx(startTime, sessionDate)
                 });
@@ -68,19 +75,15 @@ function TimelineController($firebaseArray) {
 
             // Add session
             var sessionEnd = new Date(sessionDate.getTime() + session.lengthInMinutes * 60000);
-            room1.push({
-               "title" : session.title,
+            roomViewModel.push({
+                "title" : session.title,
                 "heightPx": getHeightInPx(sessionDate, sessionEnd)
             });
 
             startTime = sessionEnd;
         });
-
-        vm.sessionsByRoom = function(room) {
-            return room1;
-        };
+        return roomViewModel;
     };
-
 
     init();
 }
