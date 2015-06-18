@@ -22,7 +22,9 @@
 
 <div class="row">
     <div class="small-12 large-3 columns session-header">Room</div>
-    <div class="small-12 large-9 columns ">{{ vm.session.room.name }}</div>
+    <a href="#/timeline/{{ vm.session.room.id }}">
+        <div class="small-12 large-9 columns ">{{ vm.session.room.name }}</div>
+    </a>
 </div>
 
 <div class="row">
