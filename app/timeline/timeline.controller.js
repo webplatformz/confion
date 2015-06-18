@@ -4,7 +4,7 @@ angular
     .module('app.timeline', ['app.core'])
 
     .config(['$routeProvider', function($routeProvider) {
-      $routeProvider.when('/timeline', {
+      $routeProvider.when('/timeline/:roomId?', {
         templateUrl: 'timeline/timeline.html',
         controller: 'TimelineController',
         controllerAs: 'vm'
@@ -12,9 +12,9 @@ angular
     }])
 
     .controller('TimelineController', TimelineController)
-    .$inject = ['roomService', 'sessionService'];
+    .$inject = ['roomService', 'sessionService', '$routeParams'];
 
-function TimelineController(roomService, sessionService) {
+function TimelineController(roomService, sessionService, $routeParams) {
     var vm = this;
     vm.times = [];
     vm.rooms = [];
@@ -32,9 +32,18 @@ function TimelineController(roomService, sessionService) {
         }
     };
 
-    roomService.getRooms().then(function(rooms) {
-       vm.rooms = rooms;
-    });
+    var roomId = $routeParams.roomId;
+    if($routeParams.roomId) {
+        roomService.getRoom(roomId).then(function(room) {
+            vm.rooms = [room];
+        });
+    } else {
+        roomService.getRooms().then(function(rooms) {
+            vm.rooms = rooms;
+        });
+    }
+
+
 
     var sessionsByRoomId = {};
     sessionService.getSessionsOrderedByDateTime().then(function (sessions) {
