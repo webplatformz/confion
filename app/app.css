@@ -7,13 +7,14 @@ div .inner-wrap {
 }
 
 .session-box {
+    padding: 0 !important;
+    border: 3px solid white;
 }
 
 .session-box-content {
     min-height: 100px;
     box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
     padding: 2px;
-
 }
 
 .main-section {
@@ -60,10 +61,6 @@ div .inner-wrap {
     list-style-type: none;
     padding-left: 0px;
     margin-left: 0px;
-}
-
-.sessionLane li {
-
 }
 
 .scheduleSessionItem {

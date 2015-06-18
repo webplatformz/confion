@@ -29,8 +29,8 @@
   "presenters": [
     {
       "id": 0,
-      "name": "Darth Vader",
-      "mail": "celinarogers@biolive.com",
+      "name": "Homer Simpson",
+      "mail": "homer.simpson@info.com",
       "sessions": {
         "0": true,
         "2": true,
@@ -44,8 +44,8 @@
     },
     {
       "id": 1,
-      "name": "Donald Duck",
-      "mail": "kleinwhitehead@decratex.com",
+      "name": "John Snow",
+      "mail": "john.snow@info.com",
       "sessions": {
         "1": true,
         "3": true,
@@ -55,8 +55,8 @@
     },
     {
       "id": 2,
-      "name": "Luke Skywalker",
-      "mail": "earlenebowers@genmex.com",
+      "name": "Walter White",
+      "mail": "walter.white@hotmail.com",
       "sessions": {
         "1": true,
         "7": true,
@@ -72,8 +72,8 @@
   "sessions": [
     {
       "id": 0,
-      "title": "The java script framework of the century",
-      "description": "Id nisi officia non aliquip voluptate ad cupidatat enim ea consectetur nulla do sit sit. Fugiat dolore consequat enim mollit ut ut eiusmod adipisicing in. Ea tempor ipsum et nisi. Occaecat et dolore consequat aute sit ex irure qui consectetur nostrud duis Lorem irure quis.",
+      "title": "Android Application testing",
+      "description": "Android unit and UI testing has not been a joyful experience in the past. This does not need to be the case anymore!.",
       "category": "Testing",
       "lengthInMinutes": 120,
       "presenter": 0,
@@ -85,9 +85,9 @@
     },
     {
       "id": 1,
-      "title": "The java script framework of the century",
-      "description": "Voluptate cillum laborum dolor anim laborum exercitation proident exercitation commodo quis. Anim tempor deserunt occaecat consequat pariatur occaecat Lorem et sunt. Ipsum irure aliqua elit dolor excepteur consectetur et consectetur eu reprehenderit dolore. Ea est dolor nulla ut aliquip dolore voluptate dolor nostrud.",
-      "category": "Management",
+      "title": "Advanced AngularJS Topics for developers and architects",
+      "description": "So you've completed the infamous 'Angular-Todo-App Tutorial' and feel like you've grasped the concepts of Angular. Now you're in a real-world Angular project and suddenly realise that you don't understand half of it. This Todo-App just doesn't quite cut it.",
+      "category": "Technology",
       "lengthInMinutes": 180,
       "presenter": 2,
       "room": 1,
@@ -98,8 +98,8 @@
     },
     {
       "id": 2,
-      "title": "The c++ framework of the past",
-      "description": "Excepteur anim cupidatat cupidatat exercitation aliqua velit quis qui sint est quis elit velit consectetur. In dolor ea et Lorem consectetur est eu ut veniam. In amet amet Lorem non laboris adipisicing. Consequat eiusmod non pariatur duis adipisicing labore mollit Lorem reprehenderit do sunt.",
+      "title": "Connect systems? .NET Service Bus!",
+      "description": "Connect your systems and interfaces painless with a loosely coupled reliable inte-grated platform using NServiceBus. Implement a Service Bus .NET solution in 60 minutes from scratch.",
       "category": "Cloud",
       "lengthInMinutes": 60,
       "presenter": 0,
@@ -111,8 +111,8 @@
     },
     {
       "id": 3,
-      "title": "The java framework of the century",
-      "description": "Magna mollit culpa non eu excepteur Lorem in eiusmod veniam id. Est enim est labore adipisicing proident laboris qui amet laborum reprehenderit. Exercitation officia ex sit cillum ex in labore adipisicing. Magna ea est nisi ea pariatur consectetur minim dolore qui voluptate Lorem consectetur.",
+      "title": "Applied Risk Management",
+      "description": "Do you care about risk management in projects? Are you interested in a practicable risk analysis method? Then join this tutorial!",
       "category": "Project Management",
       "lengthInMinutes": 60,
       "presenter": 1,
@@ -124,8 +124,8 @@
     },
     {
       "id": 4,
-      "title": "The java script framework of the future",
-      "description": "Laborum voluptate amet aute eiusmod commodo proident aliqua fugiat id labore enim culpa. Sint commodo tempor eiusmod pariatur consequat. Occaecat tempor aliqua labore cupidatat tempor aliquip aute ullamco qui nulla sit. Consequat nisi amet occaecat velit ut.",
+      "title": "IoT Introduction",
+      "description": "IOT is a new Business Unit within Zühlke. The session should introduce the unit with its strategic goals, types of projects.",
       "category": "Cloud",
       "lengthInMinutes": 180,
       "presenter": 0,
@@ -137,8 +137,8 @@
     },
     {
       "id": 5,
-      "title": "The embedded framework of the century",
-      "description": "Ullamco elit eiusmod dolor cupidatat Lorem aliquip deserunt. Qui Lorem deserunt est excepteur non incididunt labore ut labore elit laboris velit. Nisi eu anim do officia. Eiusmod laboris cupidatat sunt deserunt mollit exercitation culpa reprehenderit fugiat sunt est id.",
+      "title": "Jass Challenge - popular swiss card game with bots",
+      "description": "The Challenge is a Jass version of the lean-poker project. We will show an example implementation where bots play against real humans.",
       "category": "Technology",
       "lengthInMinutes": 180,
       "presenter": 0,
@@ -150,8 +150,8 @@
     },
     {
       "id": 6,
-      "title": "The c++ framework of the future",
-      "description": "Quis officia deserunt anim aliqua Lorem ex quis ad sit ullamco. Nisi enim minim nisi ad. Culpa eu dolor sunt mollit nisi cillum proident adipisicing eu ad ea adipisicing cillum. Velit sunt deserunt et veniam mollit eiusmod duis fugiat non amet proident.",
+      "title": "Bad Practices of Testing",
+      "description": "We practice test driven development to ensure high quality of the software, but what about the quality of the tests? Are our tests of high quality? Do we give them as much attention as we give to the implementation? What mistakes do we do when writing tests? What details do we forget about? Can you tell what is wrong with this snippet of the test code and how to improve it? This interactive presentation challenges you to identify the problems in the test code and allows to discuss ways for improvement.",
       "category": "Testing",
       "lengthInMinutes": 60,
       "presenter": 0,
@@ -163,9 +163,9 @@
     },
     {
       "id": 7,
-      "title": "The embedded framework of the future",
-      "description": "Et nulla amet sint velit amet quis laborum. Veniam eu elit tempor cupidatat sunt enim id labore eu. Qui consectetur nisi eu dolore exercitation ex velit nostrud et dolor pariatur Lorem commodo ex. Non reprehenderit excepteur adipisicing sunt eiusmod esse anim reprehenderit culpa incididunt velit elit deserunt sint.",
-      "category": "Management",
+      "title": "JavaFX 8 Workshop",
+      "description": "JavFX 8 brings back the fun of desktop GUI development",
+      "category": "Technology",
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 2,
@@ -176,8 +176,8 @@
     },
     {
       "id": 8,
-      "title": "The java framework of the century",
-      "description": "Velit mollit adipisicing veniam voluptate labore. Sit esse quis laboris exercitation labore proident mollit non laborum do elit esse et ullamco. Laborum adipisicing veniam ullamco do et ad anim eiusmod ea. Magna sit ipsum non esse cupidatat nostrud.",
+      "title": "Real World Functional Programming",
+      "description": "Using a functional programming language in a project can be rewarding in many ways. Still, trying to do so within a client project requires convincing the client to be allowed to do so. In the session, I will show how converting a small C#-project to F# in several steps can serve the first two purposes while demonstrating the tool support within Visual Studio along the way. If you want to get to know F#, learn about the benefits of functional programming languages or a way to convince customers to allow for using a functional language, this session is for you.",
       "category": "Technology",
       "lengthInMinutes": 180,
       "presenter": 2,
@@ -189,8 +189,8 @@
     },
     {
       "id": 9,
-      "title": "The java framework of the future",
-      "description": "Culpa ex dolore dolore irure deserunt et quis ea labore veniam ullamco commodo ex. Pariatur eu minim pariatur mollit sunt id sunt ipsum aliqua excepteur do tempor laborum. Veniam fugiat est ipsum anim. Occaecat et irure commodo ea elit.",
+      "title": "Business Innovation",
+      "description": "Fundamentally, Zuhlke will be successful if we make our clients successful. This tutorial focusses on how we can use advanced engineering tehcniques to make our clients successful with through innovation in their businesses. We will review the many dimensions that businesses can innovate in and show how we can enable such innovation through advanced engineering.",
       "category": "Management",
       "lengthInMinutes": 120,
       "presenter": 1,
@@ -202,8 +202,8 @@
     },
     {
       "id": 10,
-      "title": "The c++ framework of the future",
-      "description": "Voluptate anim exercitation in ullamco irure sint anim enim consectetur do mollit qui consequat minim. Qui adipisicing Lorem quis cupidatat aliqua. Aliquip aliquip laborum aliquip tempor. Minim incididunt anim commodo nisi culpa nisi laboris non culpa commodo velit.",
+      "title": "End2End testing for Angular apps with Protractor",
+      "description": "Protractor is a framework for automated E2E testing of Angular applications. In this session I will share my experience of using Proctractor on one of our recent procjects.",
       "category": "Testing",
       "lengthInMinutes": 120,
       "presenter": 1,
@@ -212,93 +212,91 @@
     },
     {
       "id": 11,
-      "title": "The java framework of the future",
-      "description": "Cupidatat irure aliqua magna nulla. Tempor culpa proident duis Lorem adipisicing id aliquip aliqua velit duis pariatur reprehenderit. Fugiat consequat voluptate Lorem nostrud nostrud consequat aliquip ullamco id anim eiusmod tempor. Incididunt minim non mollit ullamco.",
+      "title": "Building Data-Visualizations with D3",
+      "description": "[DA Track] D3 (www.d3js.org) is a JavaScript Library for binding Data to graphical Objects and building powerful, interactive Data-Visualizations for the Web. Since the demand for Data-Visualization within Rich Web-Applications has risen over the last years, this hands-on Workshop will introduce best-practices using the D3-Library and helps overcoming common difficulties in first-time usage of the API.",
       "category": "Cloud",
       "lengthInMinutes": 180,
       "presenter": 0,
       "room": 1,
-      "startTime": ""
+      "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
       "id": 12,
-      "title": "The java script framework of the future",
-      "description": "Esse exercitation deserunt sunt adipisicing. Enim id ullamco voluptate sit minim mollit ipsum tempor culpa labore officia consequat irure nulla. Magna aliqua sunt occaecat eiusmod Lorem non veniam enim esse eu eu duis ex amet. Incididunt occaecat excepteur quis qui exercitation aliquip non exercitation.",
+      "title": "Innovation in Asia - How can we profit?",
+      "description": "Asia is currently the center of economic groth and innovative local firms become strong competitors for western enterprises. Therefore, to stay competitive, we have to ask ourselfe the question What makes those firm so strong? and How can we profit form their way of doing business? ",
       "category": "Management",
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 2,
-      "startTime": ""
+      "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
       "id": 13,
-      "title": "The c++ framework of the past",
-      "description": "Ut eu cillum sint est consequat exercitation. Et officia occaecat duis pariatur excepteur duis. Aliquip eiusmod enim sunt ex ipsum. Id exercitation id excepteur non nostrud excepteur id tempor ut deserunt sint consequat consequat nisi.",
+      "title": "Culture Clash in Interdisciplinary Projects",
+      "description": "Quiet a lot of problems when people work together in interdisciplinary projects have their profound cause in the different schools people have passed through during their education and career. I would like to tell you some eyewitness accounts from my time at Zuehlke and before. I hope you find some hints how to nip problems in the bud in your projects.",
       "category": "Management",
       "lengthInMinutes": 180,
       "presenter": 2,
       "room": 3,
-      "startTime": ""
+      "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
       "id": 14,
-      "title": "The c++ framework of the future",
-      "description": "Eu reprehenderit ex officia velit commodo occaecat occaecat adipisicing. Tempor id nulla in ut occaecat commodo. Cillum eiusmod laborum laborum eiusmod. Cupidatat duis proident adipisicing qui.",
+      "title": "Spice up your User Interface Tests using Scenarioo",
+      "description": "Automated User Interface tests are very powerful and invaluable, when you make them visible and accessible to all involved people in your project. This is why we developed the open source project Scenarioo for automatically documenting software systems from a User Interface perspective using UI tests. We already use this approach successfully in several larger projects. If you want to get handson experience on how to use Scenarioo for creating a feature rich UI-driven system documentation by integrating it into your UI tests, this session is for you.",
       "category": "Testing",
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 4,
-      "startTime": ""
+      "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
       "id": 15,
-      "title": "The c++ framework of the century",
-      "description": "Nostrud veniam aute anim Lorem occaecat Lorem exercitation aliqua. Incididunt sunt proident eu ad culpa elit officia deserunt incididunt. Eu nisi sint et tempor. Ullamco mollit fugiat dolor tempor incididunt velit aliquip officia nulla consequat.",
+      "title": "Windows on Devices: Windows 10 IoT Core Hands-On",
+      "description": "With Windows 10 IoT for Small Devices, we will be getting a new OS offering designed for embedded and IoT devices. Learn more about the unique capabilites of this new OS and how to write portable solutions, You'll have the opportunity to get your hands dirty experimenting with this new OS on actual hardware like a Rhasperry PI 2.",
       "category": "Cloud",
       "lengthInMinutes": 60,
       "presenter": 0,
       "room": 0,
-      "startTime": ""
+      "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
       "id": 16,
-      "title": "The java script framework of the past",
-      "description": "Non esse proident dolore ipsum mollit. Elit laboris magna pariatur velit in aliquip proident excepteur magna. Est incididunt exercitation officia sint et pariatur do. Reprehenderit enim ex veniam nulla laborum ad.",
-      "category": "Project Management",
+      "title": "Cost Reduction in a nutshell",
+      "description": "We cannot just ask customers what they want. By the way they want something built, they'll want soemthing new (Steve Jobs). So it requires fast experimentation, empty or early delivery, agility!", "category": "Project Management",
       "lengthInMinutes": 60,
       "presenter": 0,
       "room": 1,
-      "startTime": ""
+      "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
       "id": 17,
-      "title": "The java framework of the century",
-      "description": "Dolor anim veniam dolor ad aute anim velit anim qui elit. Velit laborum ad veniam quis occaecat tempor aute deserunt excepteur occaecat do ut. Proident qui in commodo in esse et laboris ea mollit mollit enim culpa. Cupidatat aute aute cillum ea exercitation elit commodo duis esse sint excepteur adipisicing.",
+      "title": "A brilliant mind - understand persuation and motivation",
+      "description": "Knowledge about what is influencing human decisions help you protect yourself from bad influence and understand how to positive motivate other people.",
       "category": "Management",
       "lengthInMinutes": 60,
       "presenter": 2,
       "room": 2,
-      "startTime": ""
+      "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
       "id": 18,
-      "title": "The embedded framework of the future",
-      "description": "Ad qui elit et excepteur dolor occaecat dolor dolore labore in. Pariatur consequat ullamco elit Lorem minim sunt voluptate est in id id eiusmod ipsum. In nisi officia do commodo ea laborum duis nostrud dolore ut laborum cupidatat. Consectetur qui fugiat officia ullamco aliqua dolor labore nisi fugiat cillum elit.",
-      "category": "Management",
+      "title": "Basics of mobile development with Ionic and Firebase",
+      "description": "The Ionic framework provides a quick and familiar way for web developers to create rich mobile applications using anglular.js and cordova. Firebase is an online JSON database. We will put together a simple application to see how it all hangs togther.",
+      "category": "Technology",
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 3,
-      "startTime": ""
+      "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
       "id": 19,
-      "title": "The java script framework of the century",
-      "description": "Laborum sit mollit tempor duis ullamco. Eu labore duis pariatur commodo fugiat est. Irure qui sunt do aute labore quis pariatur deserunt. Esse sit esse exercitation elit et ad.",
-      "category": "Testing",
+      "title": "Developing for Apple Watch",
+      "description": "Learn how to develop an Apple Watch app! Dive into the basic architecture and UI concepts of watch apps, take a look at Apple’s new programming language Swift and try out our demo app on the real device.", "category": "Technology",
       "lengthInMinutes": 180,
       "presenter": 0,
       "room": 4,
-      "startTime": ""
+      "startTime": "2015-09-25T14:00:00.000Z"
     }
   ],
   "users" : {
