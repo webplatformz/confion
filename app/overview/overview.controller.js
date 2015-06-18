@@ -18,14 +18,20 @@ angular
 function OverviewController(sessionService) {
     var vm = this;
 
-    vm.getRandomColor = getRandomColor;
+    vm.getColor = getColor;
 
     sessionService.getSessions().then(function(sessions) {
         vm.sessions = sessions;
     });
 
-    function getRandomColor(index) {
-        var colors = ["green", "blue", "red", "purple", "orange"];
-        return colors[index % colors.length];
+    function getColor(category) {
+        var colours = {
+            "Testing" : "#D8502B",
+            "Management" : "#297BED",
+            "Cloud" : "#00A300",
+            "Project Management" : "#853B80",
+            "Technology" : "#0099AC"
+        };
+        return colours[category];
     }
 }
