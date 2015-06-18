@@ -1,22 +1,27 @@
 {
   "rooms": {
     "0": {
+      "id": 0,
       "name": "Room 101",
       "size": "40"
     },
     "1": {
+      "id": 1,
       "name": "Room 111",
       "size": "40"
     },
     "2": {
+      "id": 2,
       "name": "Room 201",
       "size": "60"
     },
     "3": {
+      "id": 3,
       "name": "Room 301",
       "size": "100"
     },
     "4": {
+      "id": 4,
       "name": "Room 311",
       "size": "40"
     }
@@ -203,10 +208,7 @@
       "lengthInMinutes": 120,
       "presenter": 1,
       "room": 0,
-      "attendees": [
-
-      ],
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 11,
@@ -216,10 +218,7 @@
       "lengthInMinutes": 180,
       "presenter": 0,
       "room": 1,
-      "attendees": [
-
-      ],
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 12,
@@ -229,10 +228,7 @@
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 2,
-      "attendees": [
-
-      ],
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 13,
@@ -242,10 +238,7 @@
       "lengthInMinutes": 180,
       "presenter": 2,
       "room": 3,
-      "attendees": [
-
-      ],
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 14,
@@ -255,10 +248,7 @@
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 4,
-      "attendees": [
-
-      ],
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 15,
@@ -268,10 +258,7 @@
       "lengthInMinutes": 60,
       "presenter": 0,
       "room": 0,
-      "attendees": [
-
-      ],
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 16,
@@ -281,10 +268,7 @@
       "lengthInMinutes": 60,
       "presenter": 0,
       "room": 1,
-      "attendees": [
-
-      ],
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 17,
@@ -294,10 +278,7 @@
       "lengthInMinutes": 60,
       "presenter": 2,
       "room": 2,
-      "attendees": [
-
-      ],
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 18,
@@ -307,10 +288,7 @@
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 3,
-      "attendees": [
-
-      ],
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 19,
@@ -320,10 +298,7 @@
       "lengthInMinutes": 180,
       "presenter": 0,
       "room": 4,
-      "attendees": [
-
-      ],
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     }
   ]
 }

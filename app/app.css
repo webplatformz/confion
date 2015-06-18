@@ -59,18 +59,13 @@ div .inner-wrap {
 
 }
 
-.session1 {
-    height: 30px;
-}
-
-.session2 {
-    height: 60px;
-}
-
-.session3 {
-    height: 90px;
-}
-
-.session4 {
-    height: 120px;
+.scheduleSessionItem {
+    background-color: lightcoral;
+    padding: 3px;
+    height: 100%;
+    font-size: small;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    border: white solid 1px;
 }
