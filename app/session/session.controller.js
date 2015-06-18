@@ -13,20 +13,20 @@ angular
 
     .controller('SessionController', SessionController)
 
-    .$inject = ['$routeParams', 'sessionService', 'presenterService', 'roomService'];
+    .$inject = ['$routeParams', 'sessionService', 'presenterService', 'roomService', 'authService', '$firebaseArray'];
 
-function SessionController($routeParams, sessionService, presenterService, roomService) {
+function SessionController($routeParams, sessionService, presenterService, roomService, authService, $firebaseArray) {
     var vm = this;
 
-    vm.attend = function () {
-        /*var ref = new Firebase("https://<YOUR-FIREBASE-APP>.firebaseio.com");
-        var authData = ref.getAuth();
-        if (authData) {
-            console.log("Authenticated user with uid:", authData.uid);
-        }*/
-    };
-
     vm.session = {};
+
+    vm.attend = function () {
+        authService.register('Hans', 'Meier', 'hans2@test.ch');
+        var user = authService.getCurrentUser();
+        var list = $firebaseArray(new Firebase('https://confion.firebaseio.com/sessions/' + $routeParams.sessionId + '/attendees'));
+        list.$add(user);
+        vm.session.attendees = list;
+    };
 
     sessionService.getSession($routeParams.sessionId).then(function(session) {
         vm.session = session;

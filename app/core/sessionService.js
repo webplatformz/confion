@@ -3,9 +3,9 @@ angular
 
     .factory('sessionService', sessionService)
 
-    .$inject = ['$q'];
+    .$inject = ['$q', '$firebaseArray'];
 
-function sessionService($q) {
+function sessionService($q, $firebaseArray) {
 
     var service = {
         getSession : getSession,

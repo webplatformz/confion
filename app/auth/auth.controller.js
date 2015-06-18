@@ -19,7 +19,6 @@ function LoginController(authService) {
     var vm = this;
     vm.login = login;
 
-
     function login() {
         // email: vm.email,
         // password: vm.password
@@ -28,4 +27,6 @@ function LoginController(authService) {
         var password =  'hans';
         authService.login(email, password);
     };
+
+
 }

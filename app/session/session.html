@@ -35,6 +35,9 @@
 </div>
 
 <div class="row">
-    <div class="small-12 large-3 columns session-header">Attendes</div>
-    <div class="small-12 large-9 columns ">{{ vm.session.attendees }}</div>
+    <ul>
+        <li ng-repeat="attendee in vm.session.attendees">
+            <p>{{attendee}}</p>
+        </li>
+    </ul>
 </div>

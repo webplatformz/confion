@@ -73,6 +73,9 @@
       "lengthInMinutes": 120,
       "presenter": 0,
       "room": 0,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-24T09:30:00.000Z"
     },
     {
@@ -83,6 +86,9 @@
       "lengthInMinutes": 180,
       "presenter": 2,
       "room": 1,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-24T09:30:00.000Z"
     },
     {
@@ -93,6 +99,9 @@
       "lengthInMinutes": 60,
       "presenter": 0,
       "room": 2,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-24T09:30:00.000Z"
     },
     {
@@ -103,6 +112,9 @@
       "lengthInMinutes": 60,
       "presenter": 1,
       "room": 3,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-24T09:30:00.000Z"
     },
     {
@@ -113,6 +125,9 @@
       "lengthInMinutes": 180,
       "presenter": 0,
       "room": 4,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-24T09:30:00.000Z"
     },
     {
@@ -123,6 +138,9 @@
       "lengthInMinutes": 180,
       "presenter": 0,
       "room": 0,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-24T14:00:00.000Z"
     },
     {
@@ -133,6 +151,9 @@
       "lengthInMinutes": 60,
       "presenter": 0,
       "room": 1,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-24T14:00:00.000Z"
     },
     {
@@ -143,6 +164,9 @@
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 2,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-24T10:30:00.000Z"
     },
     {
@@ -153,6 +177,9 @@
       "lengthInMinutes": 180,
       "presenter": 2,
       "room": 3,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-24T10:30:00.000Z"
     },
     {
@@ -163,6 +190,9 @@
       "lengthInMinutes": 120,
       "presenter": 1,
       "room": 4,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-24T14:00:00.000Z"
     },
     {
@@ -173,6 +203,9 @@
       "lengthInMinutes": 120,
       "presenter": 1,
       "room": 0,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
@@ -183,6 +216,9 @@
       "lengthInMinutes": 180,
       "presenter": 0,
       "room": 1,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
@@ -193,6 +229,9 @@
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 2,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
@@ -203,6 +242,9 @@
       "lengthInMinutes": 180,
       "presenter": 2,
       "room": 3,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
@@ -213,6 +255,9 @@
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 4,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
@@ -223,6 +268,9 @@
       "lengthInMinutes": 60,
       "presenter": 0,
       "room": 0,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
@@ -233,6 +281,9 @@
       "lengthInMinutes": 60,
       "presenter": 0,
       "room": 1,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
@@ -243,6 +294,9 @@
       "lengthInMinutes": 60,
       "presenter": 2,
       "room": 2,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
@@ -253,6 +307,9 @@
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 3,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-25T14:00:00.000Z"
     },
     {
@@ -263,6 +320,9 @@
       "lengthInMinutes": 180,
       "presenter": 0,
       "room": 4,
+      "attendees": [
+
+      ],
       "startTime": "2015-09-25T14:00:00.000Z"
     }
   ]
