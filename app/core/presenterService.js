@@ -18,7 +18,7 @@ function presenterService($q, sessionService, $firebaseObject) {
         var presenterRef = new Firebase("https://confion.firebaseio.com/presenters/" + presenterId);
         var presenter = $firebaseObject(presenterRef);
         presenter.$loaded().then(function() {
-            var promise = sessionService.getSessionsByPresentor(presenter);
+            var promise = sessionService.getSessionsByPresenter(presenter);
             promise.then(function (sessions) {
                 presenter.sessions = sessions;
             });

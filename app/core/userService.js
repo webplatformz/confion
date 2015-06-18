@@ -1,7 +1,7 @@
 angular
     .module('app.core')
 
-    .factory('colorService', userService)
+    .factory('userService', userService)
 
     .$inject = ['$q'];
 
@@ -21,6 +21,6 @@ function userService($q) {
         });
         return def.promise;
 
-    };
+    }
 
 }

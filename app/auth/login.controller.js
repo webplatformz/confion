@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-    .module('app.auth', ['app.core'])
+    .module('app.login', ['app.core'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/login', {
@@ -23,7 +23,7 @@ function LoginController(authService) {
         var email = vm.email;
         var password = vm.password;
         authService.login(email, password);
-    };
+    }
 
 
 }
