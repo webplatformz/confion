@@ -12,9 +12,9 @@ angular
     }])
 
     .controller('TimelineController', TimelineController)
-    .$inject = ['roomService', 'sessionService', '$routeParams'];
+    .$inject = ['roomService', 'sessionService', 'colorService','$routeParams'];
 
-function TimelineController(roomService, sessionService, $routeParams) {
+function TimelineController(roomService, sessionService, colorService, $routeParams) {
     var vm = this;
     vm.times = [];
     vm.rooms = [];
@@ -81,7 +81,8 @@ function TimelineController(roomService, sessionService, $routeParams) {
             roomViewModel.push({
                 "id" : session.id,
                 "title" : session.title,
-                "heightPx": getHeightInPx(sessionDate, sessionEnd)
+                "heightPx": getHeightInPx(sessionDate, sessionEnd),
+                "color" : colorService.getColor(session.category)
             });
 
             startTime = sessionEnd;

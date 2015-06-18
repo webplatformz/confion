@@ -1,7 +1,7 @@
 angular
     .module('app.core')
 
-    .factory('userService', userService)
+    .factory('colorService', userService)
 
     .$inject = ['$q'];
 
