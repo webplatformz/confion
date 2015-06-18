@@ -1,7 +1,7 @@
 <div class="row" style="font-weight: bolder;">
     <div class="large-1 small-4 columns">Zeit</div>
 
-    <div class="large-2 small-8 columns" ng-repeat="room in vm.rooms" ng-class="{'end':$last}">
+    <div class="large-2 small-8 columns" ng-repeat="room in vm.rooms" ng-class="{'end':$last, 'show-for-large-up':!$first}">
         {{ room.name }}
     </div>
 </div>
@@ -14,7 +14,7 @@
     </div>
 
 
-    <div class="large-2 small-8 columns" ng-repeat="room in vm.rooms" ng-class="{'end':$last}">
+    <div class="large-2 small-8 columns" ng-repeat="room in vm.rooms" ng-class="{'end':$last, 'show-for-large-up':!$first}">
         <ul class="sessionLane">
             <li ng-repeat="session in vm.sessionsByRoomViewModel[room.id]" style="height: {{session.heightPx}}px;">
                 <a href="#/sessions/{{session.id}}">
