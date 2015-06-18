@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
 .off-canvas-wrap {
     height: 100%;
 }
@@ -70,6 +75,7 @@ div .inner-wrap {
     padding: 3px;
     height: 100%;
     border-radius: 2px;
+    margin-bottom: 2px;
     font-size: small;
     text-align: center;
     font-weight: bold;

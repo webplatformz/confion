@@ -1,13 +1,13 @@
 <div class="row" style="font-weight: bolder;">
-    <div class="large-1 small-4 columns">Zeit</div>
+    <div class="large-1 small-4 columns text-right">Zeit</div>
 
-    <div class="large-2 small-8 columns" ng-repeat="room in vm.rooms" ng-class="{'end':$last, 'show-for-large-up':!$first}">
+    <div class="large-2 small-8 columns text-center" ng-repeat="room in vm.rooms" ng-class="{'end':$last, 'show-for-large-up':!$first}">
         {{ room.name }}
     </div>
 </div>
 
 <div class="row" style="background-image: url('timeline/schedule-background.png');">
-    <div class="large-1 small-4 columns">
+    <div class="large-1 small-4 columns text-center">
         <ul class="schedule">
             <li ng-repeat="time in vm.times">{{ time }}</li>
         </ul>
