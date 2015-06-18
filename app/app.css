@@ -10,13 +10,19 @@ div .inner-wrap {
 }
 
 .session-box-content {
-    border: 2px solid white;
     min-height: 100px;
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
 
 }
 
 .main-section {
     overflow: scroll;
+}
+
+.session-grid {
+    padding-left: 2px;
+    padding-right: 4px;
+    padding-top: 2px;
 }
 
 .session-box a {
