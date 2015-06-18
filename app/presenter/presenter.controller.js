@@ -13,9 +13,9 @@ angular
 
     .controller('PresenterController', PresenterController)
 
-    .$inject = ['$routeParams', 'presenterService', 'sessionService'];
+    .$inject = ['$routeParams', 'presenterService'];
 
-function PresenterController($routeParams, presenterService, sessionService) {
+function PresenterController($routeParams, presenterService) {
     var vm = this;
 
     presenterService.getPresenter($routeParams.presenterId).then(function(presenter) {

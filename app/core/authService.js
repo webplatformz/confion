@@ -3,12 +3,13 @@ angular
 
     .factory('authService', authService)
 
-    .$inject = ['localStorageService', '$rootScope', '$firebaseAuth', '$location', '$firebaseArray', '$firebaseObject'];
+    .$inject = ['localStorageService', '$rootScope', '$firebaseAuth', '$location', '$firebaseObject'];
 
-function authService(localStorageService, $rootScope, $firebaseAuth, $location, $firebaseArray, $firebaseObject) {
+function authService(localStorageService, $rootScope, $firebaseAuth, $location, $firebaseObject) {
 
     var service = {
         login : login,
+        logout : logout,
         getCurrentUser : getCurrentUser,
         register : register
     };
@@ -23,14 +24,19 @@ function authService(localStorageService, $rootScope, $firebaseAuth, $location, 
             password: password
         }).then(function(authData) {
             $rootScope.user = authData.uid;
-            console.log(authData);
             localStorageService.set("user", authData.uid);
             $location.path("/");
         }).catch(function(error) {
             // TODO show error in ui
             console.error("Authentication failed:", error);
         });
-    };
+    }
+
+    function logout() {
+        $rootScope.user = null;
+        localStorageService.set("user", null);
+        $location.path('/auth/login');
+    }
 
     function register(firstname, lastname, mail) {
         var ref = new Firebase('https://confion.firebaseio.com').child('users');

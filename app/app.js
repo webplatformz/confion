@@ -3,7 +3,8 @@
 angular
     .module('app', [
         'app.core',
-        'app.auth',
+        'app.login',
+        'app.logout',
         'app.overview',
         'app.sessions',
         'app.presenters',

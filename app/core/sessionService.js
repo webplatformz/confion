@@ -11,7 +11,7 @@ function sessionService($q, $firebaseArray) {
         getSession : getSession,
         getSessions : getSessions,
         getSessionsOrderedByDateTime : getSessionsOrderedByDateTime,
-        getSessionsByPresentor : getSessionsByPresentor
+        getSessionsByPresenter : getSessionsByPresenter
     };
 
     return service;
@@ -43,7 +43,7 @@ function sessionService($q, $firebaseArray) {
         return def.promise;
     }
 
-    function getSessionsByPresentor(presenter) {
+    function getSessionsByPresenter(presenter) {
         var def = $q.defer();
         var sessions = [];
         angular.forEach(presenter.sessions, function(value, key) {

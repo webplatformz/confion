@@ -21,6 +21,6 @@ function userService($q) {
         });
         return def.promise;
 
-    };
+    }
 
 }
