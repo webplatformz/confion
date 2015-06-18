@@ -13,7 +13,7 @@ angular
 
     .controller('SessionController', SessionController)
 
-    .$inject = ['$routeParams', 'sessionService', 'presenterService', 'roomService', 'authService', '$firebaseArray', 'userService'];
+    .$inject = ['$routeParams', 'sessionService', 'presenterService', 'roomService', 'authService', '$firebaseArray', 'colorService'];
 
 function SessionController($routeParams, sessionService, presenterService, roomService, authService, $firebaseArray, userService) {
     var vm = this;

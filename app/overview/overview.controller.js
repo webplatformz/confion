@@ -13,25 +13,14 @@ angular
 
     .controller('OverviewController', OverviewController)
 
-    .$inject = ['sessionService'];
+    .$inject = ['sessionService', 'colorService'];
 
-function OverviewController(sessionService) {
+function OverviewController(sessionService, colorService) {
     var vm = this;
 
-    vm.getColor = getColor;
+    vm.getColor = colorService.getColor;
 
     sessionService.getSessions().then(function(sessions) {
         vm.sessions = sessions;
     });
-
-    function getColor(category) {
-        var colours = {
-            "Testing" : "#D8502B",
-            "Management" : "#297BED",
-            "Cloud" : "#00A300",
-            "Project Management" : "#853B80",
-            "Technology" : "#0099AC"
-        };
-        return colours[category];
-    }
 }
