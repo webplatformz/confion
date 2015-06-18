@@ -71,6 +71,10 @@
   <script src="bower_components/foundation/js/foundation.min.js"></script>
   <script>
     $(document).foundation();
+
+    $(".off-canvas-list a").on("click.toggleCanvas", function(){
+        $(".exit-off-canvas").click();
+    });
   </script>
 </body>
 </html>
