@@ -19,19 +19,29 @@ function SessionController($routeParams, sessionService, presenterService, roomS
     var vm = this;
 
     vm.session = {};
+    var list = [];
+
 
     vm.attend = function () {
         var userId = authService.getCurrentUser().uid;
         userService.getUser(userId).then(function (user) {
-            var list = $firebaseArray(new Firebase('https://confion.firebaseio.com/sessions/' + $routeParams.sessionId + '/attendees'));
             list.$add(user);
-            console.log(userId);
-            vm.session.attendees = list;
+        });
+    };
+
+    vm.removeAttendee = function() {
+        var userId = authService.getCurrentUser().uid;
+        userService.getUser(userId).then(function (user) {
+            list.$remove(user);
         });
     };
 
     sessionService.getSession($routeParams.sessionId).then(function(session) {
         vm.session = session;
+
+        list = $firebaseArray(new Firebase('https://confion.firebaseio.com/sessions/' + $routeParams.sessionId + '/attendees'));
+        vm.session.attendees = list;
+
         var roomId = vm.session.room;
         roomService.getRoom(roomId).then(function (room) {
             vm.session.room = room;

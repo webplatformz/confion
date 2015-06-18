@@ -20,11 +20,8 @@ function LoginController(authService) {
     vm.login = login;
 
     function login() {
-        // email: vm.email,
-        // password: vm.password
-        // TODO DEV MODE
-        var email = 'hans@test.ch';
-        var password =  'hans';
+        var email = vm.email;
+        var password = vm.password;
         authService.login(email, password);
     };
 

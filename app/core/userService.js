@@ -14,7 +14,7 @@ function userService($q) {
     return service;
 
     function getUser(userId) {
-        var ref = new Firebase('https://confion.firebaseio.com/users/' + 'simplelogin%3A15');
+        var ref = new Firebase('https://confion.firebaseio.com/users/' + userId);
         var def = $q.defer();
         ref.once('value', function(sessionSnapshot) {
             def.resolve(sessionSnapshot.val());

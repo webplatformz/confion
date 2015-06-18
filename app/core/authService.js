@@ -23,6 +23,7 @@ function authService(localStorageService, $rootScope, $firebaseAuth, $location, 
             password: password
         }).then(function(authData) {
             $rootScope.user = authData.uid;
+            console.log(authData);
             localStorageService.set("user", authData.uid);
             $location.path("/");
         }).catch(function(error) {
@@ -50,8 +51,8 @@ function authService(localStorageService, $rootScope, $firebaseAuth, $location, 
 
     function getCurrentUser() {
         var ref = new Firebase("https://confion.firebaseio.com");
-        var authData = ref.getAuth();
-        return authData;
+        var authData = $firebaseAuth(ref);
+        return authData.$getAuth();
     }
 
     function generateRandomPassword(length) {
