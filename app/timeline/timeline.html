@@ -8,7 +8,12 @@
 
     <div class="large-2 small-4 columns" ng-repeat="room in vm.rooms">
         <ul class="sessionLane">
-            <li ng-repeat="session in vm.sessionsByRoomViewModel[room.id]" style="height: {{session.heightPx}}px;">{{ session.title }}</li>
+            <li ng-repeat="session in vm.sessionsByRoomViewModel[room.id]" style="height: {{session.heightPx}}px;">
+
+                <div class="scheduleSessionItem" ng-if="session.title != ''">
+                    {{ session.title }}
+                </div>
+            </li>
         </ul>
     </div>
 

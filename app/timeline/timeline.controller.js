@@ -11,8 +11,9 @@ angular
       });
     }])
 
-    .controller('TimelineController', TimelineController);
-// TODO inject
+    .controller('TimelineController', TimelineController)
+    .$inject = ['roomService', 'sessionService'];
+
 function TimelineController(roomService, sessionService) {
     var vm = this;
     vm.times = [];
@@ -52,13 +53,6 @@ function TimelineController(roomService, sessionService) {
         });
     });
 
-    var getHeightInPx = function(startTime, sessionDate) {
-        var differenceMilis = sessionDate - startTime;
-        var differenceMinutes = differenceMilis / 1000 / 60;
-        var heightPx = differenceMinutes;
-        return heightPx;
-    };
-
     var createViewModel = function(sessions) {
         var roomViewModel = [];
         var startTime = new Date(Date.UTC(2015, 8, 24, 8, 0, 0));
@@ -83,6 +77,13 @@ function TimelineController(roomService, sessionService) {
             startTime = sessionEnd;
         });
         return roomViewModel;
+    };
+
+    var getHeightInPx = function(startTime, sessionDate) {
+        var differenceMilis = sessionDate - startTime;
+        var differenceMinutes = differenceMilis / 1000 / 60;
+        var heightPx = differenceMinutes;
+        return heightPx;
     };
 
     init();
