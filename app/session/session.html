@@ -34,8 +34,8 @@
 
 <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
     <div class="col-xs-12 col-sm-3">
-        <button type="button" class="btn btn-success" ng-show="vm.attend" ng-click="vm.attend()">Attend</button>
-        <button type="button" class="btn btn-warning" ng-hide="vm.attend" ng-click="vm.removeAttendee()">Dont
+        <button type="button" class="btn btn-success" ng-hide="vm.alreadyAttending" ng-click="vm.attend()">Attend</button>
+        <button type="button" class="btn btn-warning" ng-show="vm.alreadyAttending" ng-click="vm.removeAttendee()">Dont
             attend
         </button>
     </div>

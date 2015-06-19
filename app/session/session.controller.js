@@ -19,20 +19,22 @@ function SessionController($routeParams, sessionService, presenterService, roomS
     var vm = this;
 
     vm.session = {};
-    vm.attend;
     var list = [];
 
+    userService.userAlreadyAttending(authService.getCurrentUser().uid, $routeParams.sessionId).then(function (data) {
+        vm.alreadyAttending = data;
+    });
 
     vm.attend = function () {
-        vm.attend = false;
+        vm.alreadyAttending = true;
         var userId = authService.getCurrentUser().uid;
-        userService.getUser(userId).then(function (user) {
+        userService.attend(userId, $routeParams.sessionId).then(function (user) {
             list.$add(user);
         });
     };
 
     vm.removeAttendee = function() {
-        vm.attend = true;
+        vm.alreadyAttending = false;
         var userId = authService.getCurrentUser().uid;
         userService.getUser(userId).then(function (user) {
             list.$remove(user);
