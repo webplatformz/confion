@@ -1,46 +1,50 @@
-<div class="row">
-    <div class="small-12 large-3 columns session-header">Title</div>
-    <div class="small-12 large-9 columns ">{{ vm.session.title }}</div>
-</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 session-header">Title</div>
+        <div class="col-xs-12 large-9 ">{{ vm.session.title }}</div>
+    </div>
 
-<div class="row">
-    <div class="small-12 large-3 columns session-header">Description</div>
-    <div class="small-12 large-9 columns ">{{ vm.session.description }}</div>
-</div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 session-header">Description</div>
+        <div class="col-xs-12 col-sm-9 ">{{ vm.session.description }}</div>
+    </div>
 
-<div class="row">
-    <div class="small-12 large-3 columns session-header">Category</div>
-    <div class="small-12 large-9 columns ">{{ vm.session.category }}</div>
-</div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 session-header">Category</div>
+        <div class="col-xs-12 col-sm-9 ">{{ vm.session.category }}</div>
+    </div>
 
-<div class="row">
-    <div class="small-12 large-3 columns session-header">Presenter</div>
-     <a id="presenter" href="#/presenters/{{ vm.session.presenter.id }}">
-        <div class="small-12 large-9 columns ">{{ vm.session.presenter.name }}</div>
-    </a>
-</div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 session-header">Presenter</div>
+        <a id="presenter" href="#/presenters/{{ vm.session.presenter.id }}">
+            <div class="col-xs-12 col-sm-9 ">{{ vm.session.presenter.name }}</div>
+        </a>
+    </div>
 
-<div class="row">
-    <div class="small-12 large-3 columns session-header">Room</div>
-    <a href="#/timeline/{{ vm.session.room.id }}">
-        <div class="small-12 large-9 columns ">{{ vm.session.room.name }}</div>
-    </a>
-</div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 session-header">Room</div>
+        <a href="#/timeline/{{ vm.session.room.id }}">
+            <div class="col-xs-12 col-sm-9 ">{{ vm.session.room.name }}</div>
+        </a>
+    </div>
 
-<div class="row">
-    <div class="small-12 large-3 columns session-header">Schedule</div>
-    <div class="small-12 large-9 columns ">{{ vm.session.startTime | date:'MMM dd, HH:mm'}} - {{ vm.session.endTime | date:'HH:mm'}}</div>
-</div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 session-header">Schedule</div>
+        <div class="col-xs-12 col-sm-9">{{ vm.session.startTime | date:'MMM dd, HH:mm'}} - {{ vm.session.endTime
+            | date:'HH:mm'}}
+        </div>
+    </div>
 
-<div class="row">
-    <button ng-show="vm.attend" ng-click="vm.attend()">Attend</button>
-    <button ng-hide="vm.attend" ng-click="vm.removeAttendee()">Dont attend</button>
-</div>
+    <div class="row">
+        <button ng-show="vm.attend" ng-click="vm.attend()">Attend</button>
+        <button ng-hide="vm.attend" ng-click="vm.removeAttendee()">Dont attend</button>
+    </div>
 
-<div class="row">
-    <ul>
-        <li ng-repeat="attendee in vm.session.attendees">
-            <p>{{attendee.firstname}} {{attendee.lastname}}</p>
-        </li>
-    </ul>
+    <div class="row">
+        <ul>
+            <li ng-repeat="attendee in vm.session.attendees">
+                <p>{{attendee.firstname}} {{attendee.lastname}}</p>
+            </li>
+        </ul>
+    </div>
 </div>
