@@ -5,7 +5,6 @@ angular
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/logout', {
-            templateUrl: 'auth/logout.html',
             controller: 'LogoutController',
             controllerAs: 'vm'
         });
@@ -13,15 +12,12 @@ angular
 
     .controller('LogoutController', LogoutController)
 
-    .$inject = ['authService'];
+    .$inject = ['authService', '$location'];
 
-function LogoutController(authService) {
+function LogoutController(authService, $location) {
     var vm = this;
-    vm.logout = logout;
 
-    function logout() {
-        authService.logout();
-    }
-
+    authService.logout();
+    $location.path("#/login")
 
 }
