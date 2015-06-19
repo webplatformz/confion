@@ -1,9 +1,7 @@
+<div class="page-header">
+    <h1>{{vm.session.title}}</h1>
+</div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 col-sm-3 session-header">Title</div>
-        <div class="col-xs-12 large-9 ">{{ vm.session.title }}</div>
-    </div>
-
     <div class="row">
         <div class="col-xs-12 col-sm-3 session-header">Description</div>
         <div class="col-xs-12 col-sm-9 ">{{ vm.session.description }}</div>
@@ -41,10 +39,13 @@
     </div>
 
     <div class="row">
-        <ul>
-            <li ng-repeat="attendee in vm.session.attendees">
+        <div class="panel panel-default">
+            <div class="panel-heading">Attendees</div>
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="attendee in vm.session.attendees">
                 <p>{{attendee.firstname}} {{attendee.lastname}}</p>
             </li>
         </ul>
+            </div>
     </div>
 </div>
