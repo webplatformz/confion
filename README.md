@@ -4,7 +4,7 @@ App to browse conference talks
 [![Build Status](https://travis-ci.org/webplatformz/confion.svg?branch=master)](https://travis-ci.org/webplatformz/confion)
 [![Dependencies Status](https://david-dm.org/webplatformz/confion.png)](https://david-dm.org/webplatformz/confion)
 
-Deployed master on heroku: confion.herokuapp.com
+Deployed master on heroku: [![confion.herokuapp.com]Test]
 
 ## Installation
 You only need to have node.js and bower installed. 
