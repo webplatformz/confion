@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
         <div class="col-xs-12 col-sm-3">
             <button type="button" class="btn btn-success" ng-show="vm.attend" ng-click="vm.attend()">Attend</button>
             <button type="button" class="btn btn-warning" ng-hide="vm.attend" ng-click="vm.removeAttendee()">Dont
@@ -43,9 +43,9 @@
     </div>
 
     <div class="row">
-        <div class="panel panel-default">
-            <div class="panel-heading">Attendees</div>
+        <div class="col-xs-12 col-md-12 session-header">
             <ul class="list-group">
+                <li class="list-group-item list-group-item-info">Attendees</li>
                 <li class="list-group-item" ng-repeat="attendee in vm.session.attendees">
                     {{attendee.firstname}} {{attendee.lastname}}
                 </li>
