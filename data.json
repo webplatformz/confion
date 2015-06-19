@@ -316,6 +316,12 @@
       "firstname" : "Daniel",
       "lastname" : "Suter",
       "password" : "LAN3NKDCxtbd!u@A"
+    },
+    "simplelogin:18" : {
+      "email" : "tr@me.ch",
+      "firstname" : "Trude",
+      "lastname" : "Merkel",
+      "password" : "password"
     }
   }
 }
