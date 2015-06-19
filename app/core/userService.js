@@ -3,12 +3,14 @@ angular
 
     .factory('userService', userService)
 
-    .$inject = ['$q'];
+    .$inject = ['$q', '$firebaseObject'];
 
-function userService($q) {
+function userService($q, $firebaseObject) {
 
     var service = {
-        getUser : getUser
+        getUser : getUser,
+        userAlreadyAttending : userAlreadyAttending,
+        attend : attend
     };
 
     return service;
@@ -20,7 +22,32 @@ function userService($q) {
             def.resolve(sessionSnapshot.val());
         });
         return def.promise;
+    }
 
+    function userAlreadyAttending(userId, sessionId) {
+        var ref = new Firebase('https://confion.firebaseio.com/users/' + userId);
+        var user = $firebaseObject(ref);
+        var def = $q.defer();
+        user.$loaded().then(function (data) {
+            def.resolve(data[sessionId]);
+        });
+        return def.promise;
+    };
+
+    function attend(userId, sessionId) {
+        var ref = new Firebase('https://confion.firebaseio.com/users/' + userId);
+        var def = $q.defer();
+        var user = $firebaseObject(ref);
+        user.$loaded().then(function () {
+            if(user[sessionId]) {
+                return false;
+            }
+            user[sessionId] = true;
+            user.$save().then(function () {
+                def.resolve(user);
+            });
+        });
+        return def.promise;
     }
 
 }
