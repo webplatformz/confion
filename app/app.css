@@ -19,6 +19,7 @@ div .inner-wrap {
     min-height: 100px;
     box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
     padding: 2px;
+    font-size: 1.8rem;
 }
 
 .main-section {
