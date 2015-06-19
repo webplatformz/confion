@@ -2,7 +2,9 @@ html, body {
     height: 100%;
 }
 
-body { padding-top: 70px; }
+body {
+    padding-top: 70px;
+}
 
 div .inner-wrap {
     height: 100%;
