@@ -15,21 +15,24 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#conf-nav"
-                    aria-expanded="false">
+                    aria-expanded="false" ng-show="$root.user">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Confion</a>
+            <span class="app-title">Confion</span>
         </div>
-        <div class="collapse navbar-collapse" id="conf-nav">
+        <div class="collapse navbar-collapse" id="conf-nav" ng-show="$root.user">
             <ul class="nav navbar-nav">
                 <li><a href="#/overview">Overview</a></li>
                 <li><a href="#/timeline">Schedule</a></li>
                 <li><a href="#/logout">Logout</a></li>
             </ul>
+
+            <p class="navbar-text navbar-right">Signed in as <b>{{ $root.user.firstname + ' ' + $root.user.lastname }}</b> &nbsp;</p>
         </div>
+
     </div>
 </nav>
 

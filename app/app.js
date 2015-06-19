@@ -21,6 +21,8 @@ angular
             var user = $rootScope.user;
             if(user == null || user == undefined) {
                 user = localStorageService.get("user");
+                // Update user
+                $rootScope.user = user;
             }
 
             if(user == null || user == undefined) {

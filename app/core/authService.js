@@ -3,9 +3,9 @@ angular
 
     .factory('authService', authService)
 
-    .$inject = ['localStorageService', '$rootScope', '$firebaseAuth', '$location', '$firebaseObject'];
+    .$inject = ['localStorageService', '$rootScope', '$firebaseAuth', '$location', '$firebaseObject', 'userService'];
 
-function authService(localStorageService, $rootScope, $firebaseAuth, $location, $firebaseObject) {
+function authService(localStorageService, $rootScope, $firebaseAuth, $location, $firebaseObject, userService) {
 
     var service = {
         login : login,
@@ -23,9 +23,12 @@ function authService(localStorageService, $rootScope, $firebaseAuth, $location, 
             email: email,
             password: password
         }).then(function(authData) {
-            $rootScope.user = authData.uid;
-            localStorageService.set("user", authData.uid);
-            $location.path("/");
+            var user = userService.getUser(authData.uid).then(function(user) {
+                $rootScope.user = user;
+                localStorageService.set("user", user);
+                $location.path("/");
+            });
+
         }).catch(function(error) {
             // TODO show error in ui
             console.error("Authentication failed:", error);
