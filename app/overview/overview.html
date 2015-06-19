@@ -1,9 +1,11 @@
-<ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-6 session-grid">
-    <li class="session-box" ng-repeat="message in vm.sessions">
-        <a href="#/sessions/{{ message.id }}">
-            <div class="session-box-content" style="background-color: {{vm.getTextColor( message.category )}}; border-color: {{vm.getBorderColor( message.category )}};">
-                {{ message.title }}
-            </div>
-        </a>
-    </li>
-</ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-2 session-box" ng-repeat="message in vm.sessions">
+            <a href="#/sessions/{{ message.id }}">
+                <div class="session-box-content" style="background-color: {{vm.getTextColor( message.category )}}; border-color: {{vm.getBorderColor( message.category )}};">
+                    {{ message.title }}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
