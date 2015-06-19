@@ -13,12 +13,9 @@
 
 <div class="row">
     <div class="col-xs-12 col-md-12 session-header">
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-info">Sessions</li>
-
-            <li class="list-group-item" ng-repeat="session in vm.presenter.sessions">
-                {{session.title}}
-            </li>
-        </ul>
+        <div class="list-group">
+            <div class="list-group-item list-group-item-info">Sessions</div>
+            <a href="#/sessions/{{session.id}}" class="list-group-item" ng-repeat="session in vm.presenter.sessions">{{ session.title }}</a>
+        </div>
     </div>
 </div>
