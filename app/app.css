@@ -1,13 +1,5 @@
-html, body {
-    height: 100%;
-}
-
 body {
     padding-top: 70px;
-}
-
-div .inner-wrap {
-    height: 100%;
 }
 
 .session-box {
@@ -20,10 +12,6 @@ div .inner-wrap {
     box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
     padding: 2px;
     font-size: 1.8rem;
-}
-
-.main-section {
-    overflow: scroll;
 }
 
 .session-grid {
