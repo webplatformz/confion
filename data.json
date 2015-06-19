@@ -218,7 +218,7 @@
       "lengthInMinutes": 180,
       "presenter": 0,
       "room": 1,
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 12,
@@ -228,7 +228,7 @@
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 2,
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 13,
@@ -238,7 +238,7 @@
       "lengthInMinutes": 180,
       "presenter": 2,
       "room": 3,
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 14,
@@ -248,7 +248,7 @@
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 4,
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 15,
@@ -258,7 +258,7 @@
       "lengthInMinutes": 60,
       "presenter": 0,
       "room": 0,
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 16,
@@ -267,7 +267,7 @@
       "lengthInMinutes": 60,
       "presenter": 0,
       "room": 1,
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 17,
@@ -277,7 +277,7 @@
       "lengthInMinutes": 60,
       "presenter": 2,
       "room": 2,
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 18,
@@ -287,7 +287,7 @@
       "lengthInMinutes": 120,
       "presenter": 2,
       "room": 3,
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     },
     {
       "id": 19,
@@ -296,7 +296,7 @@
       "lengthInMinutes": 180,
       "presenter": 0,
       "room": 4,
-      "startTime": "2015-09-25T14:00:00.000Z"
+      "startTime": ""
     }
   ],
   "users" : {

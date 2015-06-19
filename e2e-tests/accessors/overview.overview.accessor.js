@@ -1,6 +1,6 @@
 var OverviewPage = function() {
 
-    var sessionSelector = '#main-content ul li';
+    var sessionSelector = '.session-box a';
 
     this.selectSession = function() {
         var elements = element.all(by.repeater('message in vm.sessions'));
