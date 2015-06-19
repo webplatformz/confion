@@ -3,7 +3,7 @@
     <div class="row" style="font-weight: bolder; margin-bottom: 5px;">
         <div class="col-md-1 col-xs-4 text-center">Zeit</div>
 
-        <div class="col-md-2 col-xs-8 text-center" ng-repeat="room in vm.rooms" ng-class="{'visible-md-block':!$first}">
+        <div class="col-md-2 col-xs-8 text-center" ng-repeat="room in vm.rooms" ng-class="{'hidden-xs':!$first}">
             {{ room.name }}
         </div>
     </div>
@@ -16,7 +16,7 @@
         </div>
 
 
-        <div class="col-md-2 col-xs-8 columns" ng-repeat="room in vm.rooms" ng-class="{'visible-md-block':!$first}">
+        <div class="col-md-2 col-xs-8 columns" ng-repeat="room in vm.rooms" ng-class="{'hidden-xs':!$first}">
             <ul class="sessionLane">
                 <li ng-repeat="session in vm.sessionsByRoomViewModel[room.id]" style="height: {{session.heightPx}}px;">
                     <a href="#/sessions/{{session.id}}">
