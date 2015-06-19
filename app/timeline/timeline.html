@@ -1,32 +1,29 @@
-<div class="container-fluid">
+<div class="row" style="font-weight: bolder; margin-bottom: 5px;">
+    <div class="col-md-1 col-xs-4 text-center">Zeit</div>
 
-    <div class="row" style="font-weight: bolder; margin-bottom: 5px;">
-        <div class="col-md-1 col-xs-4 text-center">Zeit</div>
+    <div class="col-md-2 col-xs-8 text-center" ng-repeat="room in vm.rooms" ng-class="{'hidden-xs':!$first}">
+        {{ room.name }}
+    </div>
+</div>
 
-        <div class="col-md-2 col-xs-8 text-center" ng-repeat="room in vm.rooms" ng-class="{'hidden-xs':!$first}">
-            {{ room.name }}
-        </div>
+<div class="row" style="background-image: url('timeline/schedule-background.png');">
+    <div class="col-md-1 col-xs-4">
+        <ul class="schedule">
+            <li ng-repeat="time in vm.times">{{ time }}</li>
+        </ul>
     </div>
 
-    <div class="row" style="background-image: url('timeline/schedule-background.png');">
-        <div class="col-md-1 col-xs-4">
-            <ul class="schedule">
-                <li ng-repeat="time in vm.times">{{ time }}</li>
-            </ul>
-        </div>
 
-
-        <div class="col-md-2 col-xs-8 columns" ng-repeat="room in vm.rooms" ng-class="{'hidden-xs':!$first}">
-            <ul class="sessionLane">
-                <li ng-repeat="session in vm.sessionsByRoomViewModel[room.id]" style="height: {{session.heightPx}}px;">
-                    <a href="#/sessions/{{session.id}}">
-                        <div class="scheduleSessionItem" ng-if="session.title != ''" ng-style="{'background-color' : session.color, 'border-color' : session.borderColor, 'color' : session.textColor}">
-                            {{ session.title }}
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
+    <div class="col-md-2 col-xs-8 columns" ng-repeat="room in vm.rooms" ng-class="{'hidden-xs':!$first}">
+        <ul class="sessionLane">
+            <li ng-repeat="session in vm.sessionsByRoomViewModel[room.id]" style="height: {{session.heightPx}}px;">
+                <a href="#/sessions/{{session.id}}">
+                    <div class="scheduleSessionItem" ng-if="session.title != ''" ng-style="{'background-color' : session.color, 'border-color' : session.borderColor, 'color' : session.textColor}">
+                        {{ session.title }}
+                    </div>
+                </a>
+            </li>
+        </ul>
     </div>
+
 </div>

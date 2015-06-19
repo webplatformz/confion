@@ -1,26 +1,24 @@
-<div class="container-fluid">
-    <div class="page-header">
-        <h1>{{ vm.presenter.name }}
-            <small> {{ vm.presenter.mail }}</small>
-        </h1>
+<div class="page-header">
+    <h1>{{ vm.presenter.name }}
+        <small> {{ vm.presenter.mail }}</small>
+    </h1>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-2" style="text-align: center;">
+        <img src="http://loremflickr.com/240/180" style="border-radius: 100px;"/>
     </div>
-    <div class="row">
-        <div class="col-xs-12 col-md-2" style="text-align: center;">
-            <img src="http://loremflickr.com/240/180" style="border-radius: 100px;"/>
-        </div>
-    </div>
+</div>
 
-    <br/><br/>
+<br/><br/>
 
-    <div class="row">
-        <div class="col-xs-12 col-md-12 session-header">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info">Sessions</li>
+<div class="row">
+    <div class="col-xs-12 col-md-12 session-header">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-info">Sessions</li>
 
-                <li class="list-group-item" ng-repeat="session in vm.presenter.sessions">
-                    {{session.title}}
-                </li>
-            </ul>
-        </div>
+            <li class="list-group-item" ng-repeat="session in vm.presenter.sessions">
+                {{session.title}}
+            </li>
+        </ul>
     </div>
 </div>

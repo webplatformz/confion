@@ -2,10 +2,15 @@ body {
     padding-top: 70px;
 }
 
+.container-fluid {
+    font-size: 2rem;
+}
+
 .session-box {
     padding: 0 !important;
     border: 3px solid white;
 }
+
 
 .session-box-content {
     min-height: 100px;
