@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app" class="no-js">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Confion - Conference session app</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="app.css">
 </head>
@@ -35,11 +34,8 @@
 </nav>
 
 
-<section class="main-section" id="main-content" ng-view style="height: 100%;">
+<section id="main-content" ng-view>
 </section>
-
-</div>
-</div>
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -65,7 +61,7 @@
 <script src="core/colorService.js"></script>
 <script src="presenter/presenter.controller.js"></script>
 <script src="timeline/timeline.controller.js"></script>
-<script src="bower_components/foundation/js/vendor/jquery.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
     $(document).on('click','.navbar-collapse.in',function(e) {
