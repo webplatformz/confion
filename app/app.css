@@ -11,12 +11,10 @@ body {
     border: 3px solid white;
 }
 
-
 .session-box-content {
     min-height: 100px;
     box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
     padding: 2px;
-    font-size: 1.8rem;
 }
 
 .session-grid {
@@ -66,7 +64,6 @@ body {
     height: 100%;
     border-radius: 2px;
     margin-bottom: 2px;
-    font-size: small;
     text-align: center;
     font-weight: bold;
     border: orange solid 1px;
