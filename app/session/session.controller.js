@@ -13,9 +13,9 @@ angular
 
     .controller('SessionController', SessionController)
 
-    .$inject = ['$routeParams', 'sessionService', 'presenterService', 'roomService', 'authService', '$firebaseArray', 'userService'];
+    .$inject = ['$scope', '$routeParams', 'sessionService', 'presenterService', 'roomService', 'authService', '$firebaseArray', 'userService'];
 
-function SessionController($routeParams, sessionService, presenterService, roomService, authService, $firebaseArray, userService) {
+function SessionController($scope, $routeParams, sessionService, presenterService, roomService, authService, $firebaseArray, userService) {
     var vm = this;
 
     vm.session = {};
@@ -35,10 +35,13 @@ function SessionController($routeParams, sessionService, presenterService, roomS
 
     vm.removeAttendee = function() {
         vm.alreadyAttending = false;
-        var userId = authService.getCurrentUser().uid;
-        userService.getUser(userId).then(function (user) {
-            list.$remove(user);
+        angular.forEach(list, function (attendee) {
+            if(attendee.email === $scope.user.email) {
+                list.$remove(attendee);
+                return;
+            }
         });
+        userService.cancelAttend(authService.getCurrentUser().uid, $routeParams.sessionId);
     };
 
     sessionService.getSession($routeParams.sessionId).then(function(session) {

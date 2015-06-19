@@ -10,7 +10,8 @@ function userService($q, $firebaseObject) {
     var service = {
         getUser : getUser,
         userAlreadyAttending : userAlreadyAttending,
-        attend : attend
+        attend : attend,
+        cancelAttend : cancelAttend
     };
 
     return service;
@@ -43,6 +44,21 @@ function userService($q, $firebaseObject) {
                 return false;
             }
             user[sessionId] = true;
+            user.$save().then(function () {
+                def.resolve(user);
+            });
+        });
+        return def.promise;
+    }
+
+    function cancelAttend(userId, sessionId) {
+        var ref = new Firebase('https://confion.firebaseio.com/users/' + userId);
+        var def = $q.defer();
+        var user = $firebaseObject(ref);
+        user.$loaded().then(function () {
+            if(user[sessionId]) {
+                user[sessionId] = false;
+            }
             user.$save().then(function () {
                 def.resolve(user);
             });
